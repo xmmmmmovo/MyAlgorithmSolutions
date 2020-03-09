@@ -7,12 +7,10 @@
 # @lc code=start
 
 from typing import List
-
+from sys import maxsize
 
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        from pprint import pprint
-        from sys import maxsize
 
         # 最开始结果是0
         res = 0
@@ -20,13 +18,14 @@ class Solution:
         min_price = maxsize
 
         for price in prices:
-            pass
+            min_price = min(min_price, price)
+            res = max(res, price - min_price)
 
-        pass
+        return res
 
 # @lc code=end
 
 
 if __name__ == "__main__":
-    Solution().maxProfit([7, 1, 5, 3, 6, 4])
-    Solution().maxProfit([7, 6, 4, 3, 1])
+    print(Solution().maxProfit([7, 1, 5, 3, 6, 4]))
+    print(Solution().maxProfit([7, 6, 4, 3, 1]))
