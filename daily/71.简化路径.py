@@ -7,6 +7,7 @@
 # @lc code=start
 class Solution:
     def simplifyPath(self, path: str) -> str:
+        
         pass
 # @lc code=end
 

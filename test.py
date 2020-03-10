@@ -1,8 +1,5 @@
+A = [0, 2, 1, -6, 6, -7]
 
-t = {
-    5: 0
-}
-
-t[5] += 1
-
-print(t.get(5))
+print(sum(A[:2]))
+print(sum(A[2:3]))
+print(sum(A[3:]))
