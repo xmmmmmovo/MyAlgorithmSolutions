@@ -1,5 +1,4 @@
-A = [0, 2, 1, -6, 6, -7]
+str1="ABABAB"
+str2="ABAB"
 
-print(sum(A[:2]))
-print(sum(A[2:3]))
-print(sum(A[3:]))
+print(str1.find(str2))
