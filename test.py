@@ -1,2 +1,10 @@
+from pprint import pprint
 
-print(min(11, 111, 3))
+from collections import OrderedDict
+
+
+d = OrderedDict()
+d['c'] = 'C'
+d['a'] = 'A'
+d['b'] = 'B'
+pprint(d)
