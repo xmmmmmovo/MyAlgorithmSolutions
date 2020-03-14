@@ -1,4 +1,2 @@
-str1="ABABAB"
-str2="ABAB"
 
-print(str1.find(str2))
+print(min(11, 111, 3))
