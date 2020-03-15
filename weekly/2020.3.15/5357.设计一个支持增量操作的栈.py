@@ -1,5 +1,5 @@
 """
-5357. 设计一个支持增量操作的栈 显示英文描述 
+5357. 设计一个支持增量操作的栈
 请你设计一个支持下述操作的栈。
 
 实现自定义栈类 CustomStack 
@@ -28,7 +28,7 @@ class CustomStack:
         return self.stack.pop() if len(self.stack) != 0 else -1
 
     def increment(self, k: int, val: int) -> None:
-        for i in range(k if len(self.stack) > k else len(self.stack)):
+        for i in range(min(k, len(self.stack))):
             self.stack[i] += val
 
 
