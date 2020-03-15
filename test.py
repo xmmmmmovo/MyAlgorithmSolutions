@@ -1,10 +1,3 @@
-from pprint import pprint
+s1 = [1, 2, 3]
 
-from collections import OrderedDict
-
-
-d = OrderedDict()
-d['c'] = 'C'
-d['a'] = 'A'
-d['b'] = 'B'
-pprint(d)
+print(s1.index(3))
