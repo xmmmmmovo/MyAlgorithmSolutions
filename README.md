@@ -68,4 +68,6 @@
 
 [回文排列](interview/book/面试题01.04.回文排列.py)
 
+[字符串压缩](interview/book/面试题01.06.字符串压缩.py)
+
 [队列的最大值](interview/book/面试题59-II.队列的最大值.py)

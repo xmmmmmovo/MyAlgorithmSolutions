@@ -15,6 +15,8 @@ class Solution:
     def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
         """
         dfs+剪枝
+        但其实这个题目用bfs也可以
+        懒得写了
         """
 
         ylen = len(grid[0])
@@ -32,7 +34,7 @@ class Solution:
 
             if x < 0 or y < 0 or x >= xlen or y >= ylen:
                 return
-            if grid[x][y] == 0:
+            if not grid[x][y]:
                 return
             if vis[x][y]:
                 return
@@ -54,6 +56,8 @@ class Solution:
                     tmp = 0
 
         return ans
+
+
 # @lc code=end
 
 
