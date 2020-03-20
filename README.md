@@ -48,6 +48,8 @@
 
 ### 数学
 
+[[365] 水壶问题](daily/math/365.水壶问题.py)
+
 [[836] 矩形重叠](daily/math/836.矩形重叠.py)
 
 ### 排序
@@ -66,7 +68,7 @@
 
 [[1078] Bigram 分词](daily/string/1078.bigram-分词.py)
 
-[URL化](interview/book/面试题01.03.URL化.py)
+[URL化](daily/string/面试题01.03.URL化.py)
 
 [字符串压缩](daily/string/面试题01.06.字符串压缩.py)
 
