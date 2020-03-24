@@ -1,4 +1,4 @@
-# LeetCode
+# LeetCodeSolutions
 
 ## 日常
 
@@ -65,6 +65,8 @@
 [[365] 水壶问题](daily/math/365.水壶问题.py)
 
 [[836] 矩形重叠](daily/math/836.矩形重叠.py)
+
+[[892] 三维形体的表面积](daily/math/892.三维形体的表面积.py)
 
 [[1276]不浪费原料的汉堡制作方案](daily/math/1276.不浪费原料的汉堡制作方案.py)
 
