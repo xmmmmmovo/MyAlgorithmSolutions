@@ -4,9 +4,9 @@
 
 ## 笔记
 
-[数据结构MOOC笔记](note in mooc.md)
+[数据结构MOOC笔记](note%20in%20mooc.md)
 
-[日常笔记](note in daily.md)
+[日常笔记](note%20in%20daily.md)
 
 ## 大一题目
 
@@ -16,15 +16,39 @@
 
 [签到题](FreshmanAlgorithm/2017%20freshman%20competition/签到题1.c)
 
-[C：潜入密室](FreshmanAlgorithm\2017 freshman competition\C：潜入密室.c)
+[C:潜入密室](FreshmanAlgorithm/2017%20freshman%20competition/C：潜入密室.c)
 
 [Milk5](FreshmanAlgorithm/2017%20freshman%20competition/Milk5.c)
 
 [The Third Cup is Free 4](FreshmanAlgorithm/2017%20freshman%20competition/The%20Third%20Cup%20is%20Free%204.c)
 
-[圆周率逼近](FreshmanAlgorithm\2018 bluebrige\PI circle.cpp)
+[圆周率逼近](FreshmanAlgorithm/2018%20bluebrige/PI%20circle.cpp)
 
-[求和](FreshmanAlgorithm\2018 bluebrige\sumgather.cpp)
+[求和](FreshmanAlgorithm/2018%20bluebrige/sumgather.cpp)
+
+## HDOJ
+
+[1002 A + B Problem II](HDU%20OJ/1002%20A%20+%20B%20Problem%20II.cpp)
+
+[1003 Max Sum](HDU%20OJ/1003%20Max%20Sum.cpp)
+
+[2000 ASCII码排序](HDU%20OJ/2000%20ASCII码排序.cpp)
+
+[2001 计算两点间的距离](HDU%20OJ/2001%20计算两点间的距离.cpp)
+
+[2002 计算球体积](HDU%20OJ/2002%20计算球体积.cpp)
+
+[2003 求绝对值](HDU%20OJ/2003%20求绝对值.cpp)
+
+[2004 成绩转换](HDU%20OJ/2004%20成绩转换.cpp)
+
+[2005 第几天](HDU%20OJ/2005%20第几天.cpp)
+
+[2006 求奇数的和](HDU%20OJ/2006%20求奇数的和.cpp)
+
+[2007 平方和与立方和](HDU%20OJ/2007%20平方和与立方和.cpp)
+
+[2010 水仙花数](HDU%20OJ/2010%20水仙花数.cpp)
 
 ## LeetCode
 
@@ -133,3 +157,97 @@
 ### 数据库
 
 [[175] 组合两个表](LeetCode/sql/175.组合两个表.sql)
+
+## PTA
+
+[1001害死人不偿命的(3n+1)猜想](PTA/1001害死人不偿命的(3n+1)猜想.cpp)
+
+[1002写出这个数](PTA/1002写出这个数.cpp)
+
+[1003我要通过！](PTA/1003我要通过！.cpp)
+
+## 大二
+
+### 2019 新生赛
+
+[A A+B pro](SophomoreAlgorithm/acm%20new%20stu%20comp/A%20A+B%20pro.cpp)
+
+[B Num Sum](SophomoreAlgorithm/acm%20new%20stu%20comp/B%20Num%20Sum.cpp)
+
+[C Salt Water](SophomoreAlgorithm/acm%20new%20stu%20comp/C%20Salt%20Water.cpp)
+
+[D Let the Ballon Rise](SophomoreAlgorithm/acm%20new%20stu%20comp/D%20Let%20the%20Ballon%20Rise.cpp)
+
+[E Digital Roots](SophomoreAlgorithm/acm%20new%20stu%20comp/E%20Digital%20Roots.cpp)
+
+[F 3 foots](SophomoreAlgorithm/acm%20new%20stu%20comp/F%203%20foots.cpp)
+
+### 蓝桥杯模拟
+
+[2.moha](SophomoreAlgorithm/bb2019sim/2.moha.cpp)
+
+[3.beishu](SophomoreAlgorithm/bb2019sim/3.beishu.cpp)
+
+### 蓝桥杯学习
+
+#### bfs
+
+[bfs line min step](SophomoreAlgorithm/blueBrige2019/bfs/bfs%20line%20min%20step.cpp)
+
+[bfs maze](SophomoreAlgorithm/blueBrige2019/bfs/bfs%20maze.cpp)
+
+#### 大数
+
+[list gather](SophomoreAlgorithm/blueBrige2019/big%20num/list%20gather.cpp)
+
+#### dfs/抽象dfs
+
+[boom search cut](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/boom%20search%20cut.cpp)
+
+[dfs 2n queen](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/dfs%202n%20queen.cpp)
+
+[dfs chinese chess](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/dfs%20chinese%20chess.cpp)
+
+[dfs cut](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/dfs%20cut.cpp)
+
+[dfs finer & min steps](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/dfs%20finer%20&%20min%20steps.cpp)
+
+[dfs island](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/dfs%20island.cpp)
+
+[dfs maze reach](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/dfs%20maze%20reach.cpp)
+
+[dfs num sums finer](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/dfs%20num%20sums%20finer.cpp)
+
+[dfs num sums](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/dfs%20num%20sums.cpp)
+
+[dfs stick tri](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/dfs%20stick%20tri.cpp)
+
+[n queen](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/n%20queen.cpp)
+
+#### 逻辑
+
+[05.01 son & mom](SophomoreAlgorithm/blueBrige2019/logic/05.01%20son%20&%20mom.cpp)
+
+#### 测试
+
+[C.数列求和](SophomoreAlgorithm/blueBrige2019/real%20problem%20in%202019/C.数列求和.cpp)
+
+[D.数的分解](SophomoreAlgorithm/blueBrige2019/real%20problem%20in%202019/D.数的分解.cpp)
+
+#### 栈/递归
+
+[hanoi](SophomoreAlgorithm/blueBrige2019/stack%20&%20rec/hanoi.cpp)
+
+[hanoi2](SophomoreAlgorithm/blueBrige2019/stack%20&%20rec/hanoi2.cpp)
+
+[train exc](SophomoreAlgorithm/blueBrige2019/stack%20&%20rec/train%20exc.cpp)
+
+[zhengze](SophomoreAlgorithm/blueBrige2019/stack%20&%20rec/zhengze.cpp)
+
+### 清华oj入门
+
+[0.Add](SophomoreAlgorithm/tutorial/0.Add.py)
+
+[2.Divisor](SophomoreAlgorithm/tutorial/2.Divisor.py)
+
+[3.Count C++11](SophomoreAlgorithm/tutorial/3.Count%20C++11.cpp)
