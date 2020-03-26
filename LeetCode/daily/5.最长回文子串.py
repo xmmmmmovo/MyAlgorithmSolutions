@@ -5,10 +5,13 @@
 #
 
 # @lc code=start
+
+
 class Solution:
     def longestPalindrome(self, s: str) -> str:
         pass
 # @lc code=end
+
 
 if __name__ == "__main__":
     pass

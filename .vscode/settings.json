@@ -2,5 +2,13 @@
     "python.pythonPath": "venv\\Scripts\\python.exe",
     "files.associations": {
         "iosfwd": "cpp"
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/venv": true
     }
 }
