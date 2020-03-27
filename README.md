@@ -186,9 +186,9 @@
 
 ### 蓝桥杯模拟
 
-[2.moha](SophomoreAlgorithm/bb2019sim/2.moha.cpp)
+[2.井底之蛙](SophomoreAlgorithm/bb2019sim/2.moha.cpp)
 
-[3.beishu](SophomoreAlgorithm/bb2019sim/3.beishu.cpp)
+[3.三的倍数](SophomoreAlgorithm/bb2019sim/3.beishu.cpp)
 
 ### 蓝桥杯学习
 
@@ -238,13 +238,13 @@
 
 #### 栈/递归
 
-[hanoi](SophomoreAlgorithm/blueBrige2019/stack%20&%20rec/hanoi.cpp)
+[汉诺塔](SophomoreAlgorithm/blueBrige2019/stack%20&%20rec/hanoi.cpp)
 
-[hanoi2](SophomoreAlgorithm/blueBrige2019/stack%20&%20rec/hanoi2.cpp)
+[汉诺塔2](SophomoreAlgorithm/blueBrige2019/stack%20&%20rec/hanoi2.cpp)
 
-[train exc](SophomoreAlgorithm/blueBrige2019/stack%20&%20rec/train%20exc.cpp)
+[火车排表](SophomoreAlgorithm/blueBrige2019/stack%20&%20rec/train%20exc.cpp)
 
-[zhengze](SophomoreAlgorithm/blueBrige2019/stack%20&%20rec/zhengze.cpp)
+[正则](SophomoreAlgorithm/blueBrige2019/stack%20&%20rec/zhengze.cpp)
 
 ### 清华oj入门
 
