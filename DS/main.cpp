@@ -1,12 +1,13 @@
 #include <iostream>
 #include <algorithm>
-#include "include/vector.hpp"
+#include "include/ds/vector.hpp"
 
 using namespace ds;
 
 int main() {
-    vector<int> i;
+    vector<int> i(10, 100);
+    
+//    std::cout << i << std::endl;
 
-    std::cout << "Hello, World!" << std::endl;
     return 0;
 }

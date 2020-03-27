@@ -228,7 +228,7 @@
 
 #### 逻辑
 
-[05.01 son & mom](SophomoreAlgorithm/blueBrige2019/logic/05.01%20son%20&%20mom.cpp)
+[05.01母亲与儿子](SophomoreAlgorithm/blueBrige2019/logic/05.01%20son%20&%20mom.cpp)
 
 #### 测试
 

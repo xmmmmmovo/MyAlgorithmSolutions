@@ -1,6 +1,0 @@
-cmake_minimum_required(VERSION 3.10)
-project(BitACM)
-
-set(CMAKE_CXX_STANDARD 14)
-
-add_executable(ch2 ch2.cpp)
