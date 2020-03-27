@@ -1,7 +1,8 @@
 {
     "python.pythonPath": "venv\\Scripts\\python.exe",
     "files.associations": {
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "cstdlib": "cpp"
     },
     "files.exclude": {
         "**/.git": true,

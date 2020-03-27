@@ -194,37 +194,37 @@
 
 #### bfs
 
-[bfs line min step](SophomoreAlgorithm/blueBrige2019/bfs/bfs%20line%20min%20step.cpp)
+[bfs最小步数](SophomoreAlgorithm/blueBrige2019/bfs/bfs%20line%20min%20step.cpp)
 
-[bfs maze](SophomoreAlgorithm/blueBrige2019/bfs/bfs%20maze.cpp)
+[bfs迷宫](SophomoreAlgorithm/blueBrige2019/bfs/bfs%20maze.cpp)
 
 #### 大数
 
-[list gather](SophomoreAlgorithm/blueBrige2019/big%20num/list%20gather.cpp)
+[大数乘法](SophomoreAlgorithm/blueBrige2019/big%20num/list%20gather.cpp)
 
 #### dfs/抽象dfs
 
-[boom search cut](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/boom%20search%20cut.cpp)
+[炸弹搜索(剪枝)](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/boom%20search%20cut.cpp)
 
-[dfs 2n queen](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/dfs%202n%20queen.cpp)
+[2n皇后问题(dfs剪枝)](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/dfs%202n%20queen.cpp)
 
-[dfs chinese chess](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/dfs%20chinese%20chess.cpp)
+[中国象棋(dfs剪枝)](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/dfs%20chinese%20chess.cpp)
 
-[dfs cut](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/dfs%20cut.cpp)
+[dfs奇偶剪枝](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/dfs%20cut.cpp)
 
-[dfs finer & min steps](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/dfs%20finer%20&%20min%20steps.cpp)
+[dfs最小步](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/dfs%20finer%20&%20min%20steps.cpp)
 
-[dfs island](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/dfs%20island.cpp)
+[岛屿问题(dfs)](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/dfs%20island.cpp)
 
-[dfs maze reach](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/dfs%20maze%20reach.cpp)
+[走迷宫(dfs)](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/dfs%20maze%20reach.cpp)
 
-[dfs num sums finer](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/dfs%20num%20sums%20finer.cpp)
+[数字求和(抽象dfs)](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/dfs%20num%20sums%20finer.cpp)
 
-[dfs num sums](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/dfs%20num%20sums.cpp)
+[数字计数(抽象dfs)](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/dfs%20num%20sums.cpp)
 
-[dfs stick tri](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/dfs%20stick%20tri.cpp)
+[拼三角形(抽象dfs)](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/dfs%20stick%20tri.cpp)
 
-[n queen](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/n%20queen.cpp)
+[n皇后问题](SophomoreAlgorithm/blueBrige2019/dfs%20&%20abstract%20dfs/n%20queen.cpp)
 
 #### 逻辑
 
