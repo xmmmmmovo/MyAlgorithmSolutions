@@ -1,1 +1,3 @@
-print(5 // 2)
+from math import gcd
+
+print(gcd(2, 11))

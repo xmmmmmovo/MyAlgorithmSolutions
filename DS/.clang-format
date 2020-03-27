@@ -1,0 +1,6 @@
+Language: Cpp
+SpacesInSquareBrackets:    true
+NamespaceIndentation:    Inner
+AlignConsecutiveAssignments:    true
+AlignConsecutiveDeclarations:    true
+AlignTrailingComments:    true
