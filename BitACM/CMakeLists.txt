@@ -3,4 +3,4 @@ project(BitACM)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(BitACM main.cpp)
+add_executable(ch2 ch2.cpp)

@@ -118,6 +118,8 @@
 
 [[892] 三维形体的表面积](LeetCode/daily/math/892.三维形体的表面积.py)
 
+[[914] 卡牌分组](LeetCode/daily/math/914.卡牌分组.py)
+
 [[1276]不浪费原料的汉堡制作方案](LeetCode/daily/math/1276.不浪费原料的汉堡制作方案.py)
 
 [[1390]四因数](LeetCode/daily/math/1390.四因数.py)

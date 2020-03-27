@@ -9,6 +9,8 @@ from typing import List
 # @lc code=start
 
 from collections import Counter
+from math import gcd
+from functools import reduce
 
 
 class Solution:
@@ -16,19 +18,9 @@ class Solution:
         if len(deck) < 2:
             return False
 
-        cd = Counter(deck)
+        cd = Counter(deck).values()
 
-        print(cd)
-        print(max(cd))
-        print(min(cd))
-
-        mx = max(cd.values())
-        mi = min(cd.values())
-
-        if max(cd.values()) != min(cd.values()) and gcd():
-            return False
-
-        return True
+        return reduce(gcd, cd) > 1
 # @lc code=end
 
 
