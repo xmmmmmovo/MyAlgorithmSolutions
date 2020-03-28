@@ -8,6 +8,10 @@
 
 [日常笔记](note%20in%20daily.md)
 
+## 数据结构
+
+[向量](DS/include/ds/vector.hpp)
+
 ## 大一题目
 
 [山门口](FreshmanAlgorithm/2017%20freshman%20competition/2山门口.c)
@@ -159,6 +163,10 @@
 ### 数据库
 
 [[175] 组合两个表](LeetCode/sql/175.组合两个表.sql)
+
+### 字典树
+
+[[820] 单词的压缩编码](LeetCode/daily/trie/820.单词的压缩编码.py)
 
 ## PTA
 

@@ -1,3 +1,4 @@
-from math import gcd
+a = [1, 2, 3]
 
-print(gcd(2, 11))
+print(len(a))
+print(a[1])
