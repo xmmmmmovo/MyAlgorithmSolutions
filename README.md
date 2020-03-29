@@ -144,6 +144,8 @@
 
 [[6] Z 字形变换](LeetCode/daily/string/6.z-字形变换.py)
 
+[[9] 回文数](LeetCode/daily/string/9.回文数.py)
+
 [[824] 山羊拉丁文](LeetCode/daily/string/824.山羊拉丁文.py)
 
 [[1071] 字符串的最大公因子](LeetCode/daily/string/1071.字符串的最大公因子.py)
