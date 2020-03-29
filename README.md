@@ -128,6 +128,8 @@
 
 [[1390]四因数](LeetCode/daily/math/1390.四因数.py)
 
+[圆圈中最后剩下的数字](LeetCode/daily/math/面试题62.圆圈中最后剩下的数字.py)
+
 ### 模拟
 
 [[999] 车的可用捕获量](LeetCode/daily/simulate/999.车的可用捕获量.py)
