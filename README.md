@@ -104,6 +104,8 @@
 
 [[945] 使数组唯一的最小增量](LeetCode/daily/greedy/945.使数组唯一的最小增量.py)
 
+[[1111] 有效括号的嵌套深度](LeetCode/daily/greedy/1111.有效括号的嵌套深度.py)
+
 ### 哈希表
 
 [[409] 最长回文串](LeetCode/daily/hash/409.最长回文串.py)
