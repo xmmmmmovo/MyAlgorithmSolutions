@@ -3,4 +3,4 @@ project(DS)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(DS main.cpp include/ds/vector.hpp)
+add_executable(DS main.cpp include/ds/vector.hpp include/ds/string.hpp)

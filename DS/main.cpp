@@ -1,6 +1,6 @@
-#include <iostream>
-#include <algorithm>
 #include "include/ds/vector.hpp"
+#include <algorithm>
+#include <iostream>
 
 using namespace ds;
 using std::cout;

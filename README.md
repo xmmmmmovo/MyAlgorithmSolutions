@@ -54,6 +54,8 @@
 
 [2010 水仙花数](HDU%20OJ/2010%20水仙花数.cpp)
 
+[2571 命运]
+
 ## LeetCode
 
 ### 数组
@@ -84,7 +86,7 @@
 
 ### dfs
 
-[[695] 岛屿的最大面积](LeetCode/daily/dfs/695.岛屿的最大面积.py)
+[**[695] 岛屿的最大面积(经典题目 dfs+剪枝)**](LeetCode/daily/dfs/695.岛屿的最大面积.py)
 
 ### dp
 
@@ -110,7 +112,7 @@
 
 ### 链表
 
-[[206] 反转链表](LeetCode/daily/list/206.反转链表.py)
+[**[206] 反转链表(经典题目)**](LeetCode/daily/list/206.反转链表.py)
 
 [[876] 链表的中间结点](LeetCode/daily/list/876.链表的中间结点.py)
 
@@ -126,7 +128,7 @@
 
 [[1276]不浪费原料的汉堡制作方案](LeetCode/daily/math/1276.不浪费原料的汉堡制作方案.py)
 
-[[1390]四因数](LeetCode/daily/math/1390.四因数.py)
+[**[1390]四因数(经典题目 素数筛)**](LeetCode/daily/math/1390.四因数.py)
 
 [圆圈中最后剩下的数字](LeetCode/daily/math/面试题62.圆圈中最后剩下的数字.py)
 
@@ -137,6 +139,8 @@
 ### 排序
 
 [[56] 合并区间](LeetCode/daily/sort/56.合并区间.py)
+
+[**[912] 排序数组(经典题目 快排 非比较排序 桶排)**](LeetCode/daily/sort/912.排序数组.py)
 
 [最小的k个数](LeetCode/daily/sort/面试题40.最小的k个数.py)
 
@@ -162,15 +166,15 @@
 
 [[863] 二叉树中所有距离为 K 的结点](LeetCode/daily/tree/863.二叉树中所有距离为-k-的结点.py)
 
-[[872] 叶子相似的树](LeetCode/daily/tree/872.叶子相似的树.py)
+[**[872] 叶子相似的树(经典题目 非递归前序遍历)**](LeetCode/daily/tree/872.叶子相似的树.py)
 
 ### 数据库
 
-[[175] 组合两个表](LeetCode/sql/175.组合两个表.sql)
+[**[175] 组合两个表(经典题目 联表查询)**](LeetCode/sql/175.组合两个表.sql)
 
 ### 字典树
 
-[[820] 单词的压缩编码](LeetCode/daily/trie/820.单词的压缩编码.py)
+[**[820] 单词的压缩编码(经典题目 字典树)**](LeetCode/daily/trie/820.单词的压缩编码.py)
 
 ## PTA
 
