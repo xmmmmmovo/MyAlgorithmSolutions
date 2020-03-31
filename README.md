@@ -82,6 +82,8 @@
 
 [[1381]设计一个支持增量操作的栈](LeetCode/daily/design/1381.设计一个支持增量操作的栈.py)
 
+[[1396]设计地铁系统](LeetCode/daily/design/1396.设计地铁系统.py)
+
 [队列的最大值](LeetCode/daily/design/面试题59-II.队列的最大值.py)
 
 ### dfs
@@ -89,6 +91,8 @@
 [**[695] 岛屿的最大面积(经典题目 dfs+剪枝)**](LeetCode/daily/dfs/695.岛屿的最大面积.py)
 
 ### dp
+
+[[1395]统计作战单位数](LeetCode/daily/dp/1395.统计作战单位数.py)
 
 [按摩师](LeetCode/daily/dp/面试题17.16.按摩师.py)
 
@@ -105,6 +109,8 @@
 [[409] 最长回文串](LeetCode/daily/hash/409.最长回文串.py)
 
 [[1160] 拼写单词](LeetCode/daily/hash/1160.拼写单词.py)
+
+[[1394]找出数组中的幸运数](LeetCode/daily/hash/1394.找出数组中的幸运数.py)
 
 [判定是否互为字符重排](LeetCode/daily/hash/面试题01.02.判定是否互为字符重排.py)
 
