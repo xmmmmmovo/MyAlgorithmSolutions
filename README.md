@@ -142,6 +142,8 @@
 
 ### 模拟
 
+[[289] 生命游戏](LeetCode/daily/simulate/289.生命游戏.py)
+
 [[999] 车的可用捕获量](LeetCode/daily/simulate/999.车的可用捕获量.py)
 
 ### 排序
