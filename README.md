@@ -74,7 +74,7 @@
 
 [[1389]按既定顺序创建目标数组](LeetCode/daily/array/1389.按既定顺序创建目标数组.py)
 
-[旋转矩阵](LeetCode/daily/array/面试题01.07.%20旋转矩阵.py)
+[**旋转矩阵(经典题目 原地旋转)**](LeetCode/daily/array/面试题01.07.%20旋转矩阵.py)
 
 ### 位运算
 
@@ -91,6 +91,10 @@
 ### dfs
 
 [**[695] 岛屿的最大面积(经典题目 dfs+剪枝)**](LeetCode/daily/dfs/695.岛屿的最大面积.py)
+
+### 双指针
+
+[[42] 接雨水](LeetCode/daily/double-point/42.接雨水.py)
 
 ### dp
 
@@ -152,6 +156,8 @@
 
 [[999] 车的可用捕获量](LeetCode/daily/simulate/999.车的可用捕获量.py)
 
+[[1403]非递增顺序的最小子序列](LeetCode/daily/simulate/1403.非递增顺序的最小子序列.py)
+
 ### 排序
 
 [[56] 合并区间](LeetCode/daily/sort/56.合并区间.py)
@@ -171,6 +177,8 @@
 [[1071] 字符串的最大公因子](LeetCode/daily/string/1071.字符串的最大公因子.py)
 
 [[1078] Bigram 分词](LeetCode/daily/string/1078.bigram-分词.py)
+
+[[1405]最长快乐字符串](LeetCode/daily/string/1405.最长快乐字符串.py)
 
 [URL化](LeetCode/daily/string/面试题01.03.URL化.py)
 
