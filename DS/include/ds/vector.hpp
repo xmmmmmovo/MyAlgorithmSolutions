@@ -9,15 +9,19 @@
 #include <iostream>
 #include <string>
 
+namespace ds {
+using std::cout;
+using std::endl;
 using std::istream;
 using std::ostream;
 using std::string;
 
-namespace ds {
 template <typename T>
 class vector {
   public:
     vector();
+
+    virtual ~vector();
 
     vector(size_t size);
 
@@ -72,6 +76,13 @@ vector<T>::vector() {
     it    = 16; // 对齐
     elem  = new T[ it ];
     _size = 0;
+}
+
+template <typename T>
+vector<T>::~vector() {
+#ifdef DEBUG
+    cout << "析构函数执行" << endl;
+#endif
 }
 
 template <typename T>

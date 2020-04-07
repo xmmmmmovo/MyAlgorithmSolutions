@@ -74,6 +74,8 @@
 
 [[1389]按既定顺序创建目标数组](LeetCode/daily/array/1389.按既定顺序创建目标数组.py)
 
+[旋转矩阵](LeetCode/daily/array/面试题01.07.%20旋转矩阵.py)
+
 ### 位运算
 
 [判定字符是否唯一](LeetCode/daily/bits/面试题01.01.判定字符是否唯一.py)
@@ -139,6 +141,10 @@
 [**[1390]四因数(经典题目 素数筛)**](LeetCode/daily/math/1390.四因数.py)
 
 [圆圈中最后剩下的数字](LeetCode/daily/math/面试题62.圆圈中最后剩下的数字.py)
+
+### 正则
+
+[[8] 字符串转换整数 (atoi)](LeetCode/daily/regex/8.字符串转换整数-atoi.py)
 
 ### 模拟
 
