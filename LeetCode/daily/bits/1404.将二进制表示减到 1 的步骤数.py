@@ -18,24 +18,13 @@ class Solution2:
         模拟位操作
         注:对于2这个数字要敏感
         """
-        res, idx = 0, len(s) - 1
-        while idx > 0:
-            if s[idx] == '0':
-                # 如果是偶数直接右移一位
-                res += 1
-                idx -= 1
-            else:
-                res += 1
-                while idx >= 0 and s[idx] == '1':
-                    # 这里判断如果是1就直接进位
-                    # 进位之后发现都是偶数 直接右移
-                    res += 1
-                    idx -= 1
-                if idx > 0:
-                    s[idx] = '1'
-        
-        return res
+        res, up = 0, 0
 
+        for i in range(len(s) - 1, 0, -1):
+            res += 2 if up ^ (s[i] == '1') else 1
+            up = 1 if up or (s[i] == '1') else 0
+
+        return res + 1 if up else res
 
 
 if __name__ == "__main__":

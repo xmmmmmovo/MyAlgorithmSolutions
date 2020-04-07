@@ -118,7 +118,7 @@ class LFUCache:
                 self.first_append(Data(key, value, 1))
 
 # @lc code=end
-
+ 
 
 cache = LFUCache(2)
 
