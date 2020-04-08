@@ -4,13 +4,28 @@
 # [1162] 地图分析
 #
 
+from typing import List
+
 # @lc code=start
 
 
 class Solution:
     def maxDistance(self, grid: List[List[int]]) -> int:
+        """
+        bfs
+        """
         dirs = [(0, -1), ()]
         pass
+
+
+class Solution2:
+    def maxDistance(self, grid: List[List[int]]) -> int:
+        """
+        dp
+        """
+        dirs = [(0, -1), ()]
+        pass
+
 # @lc code=end
 
 

@@ -84,6 +84,8 @@
 
 ### 设计类
 
+[[225] 用队列实现栈](LeetCode/daily/design/225.用队列实现栈.py)
+
 [[1381]设计一个支持增量操作的栈](LeetCode/daily/design/1381.设计一个支持增量操作的栈.py)
 
 [[1396]设计地铁系统](LeetCode/daily/design/1396.设计地铁系统.py)
@@ -169,6 +171,10 @@
 [**[912] 排序数组(经典题目 快排 非比较排序 桶排)**](LeetCode/daily/sort/912.排序数组.py)
 
 [最小的k个数](LeetCode/daily/sort/面试题40.最小的k个数.py)
+
+### 栈
+
+[[71] 简化路径](LeetCode/daily/stack/71.简化路径.py)
 
 ### 字符串
 
