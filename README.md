@@ -196,6 +196,10 @@
 
 [字符串压缩](LeetCode/daily/string/面试题01.06.字符串压缩.py)
 
+### 回溯
+
+[[22] 括号生成](LeetCode/daily/traceback/22.括号生成.py)
+
 ### 树
 
 [[543] 二叉树的直径](LeetCode/daily/tree/543.二叉树的直径.py)
