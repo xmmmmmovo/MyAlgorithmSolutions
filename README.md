@@ -106,6 +106,8 @@
 
 ### dp
 
+[[72] 编辑距离](LeetCode/daily/dp/72.编辑距离.py)
+
 [[1395]统计作战单位数](LeetCode/daily/dp/1395.统计作战单位数.py)
 
 [按摩师](LeetCode/daily/dp/面试题17.16.按摩师.py)
