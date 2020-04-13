@@ -1,5 +1,5 @@
 
-class Solution:
+class Solution2:
     def entityParser(self, text: str) -> str:
         return text.replace('&frasl;', '/')\
             .replace('&lt;', '<')\
@@ -7,6 +7,42 @@ class Solution:
             .replace('&quot;', '\"')\
             .replace('&apos;', '\'')\
             .replace('&amp;', '&')
+
+
+class Solution:
+    def __init__(self):
+        self.match = {
+            "&quot;": "\"",
+            "&apos;": "'",
+            "&amp;": "&",
+            "&gt;": ">",
+            "&lt;": "<",
+            "&frasl;": "/"
+        }
+
+    def entityParser(self, text: str) -> str:
+        k, res = '', ''
+
+        for c in text:
+            if c == '&':
+                if k != '':
+                    res += k
+                    k = ''
+                k += c
+            elif c == ';':
+                k += c
+                if k in self.match:
+                    res += self.match[k]
+                    k = ''
+                else:
+                    res += k
+                    k = ''
+            else:
+                k += c
+            # print(f'res={res} c={c} k={k}')
+
+        res += k
+        return res
 
 
 if __name__ == "__main__":
