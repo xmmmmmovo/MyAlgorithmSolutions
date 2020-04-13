@@ -83,36 +83,15 @@ class Solution3:
         状态转移优化dp
         o k * n
         """
-        d = dict()
+        dp = [[0] * (N + 1) for _ in range(K + 1)]
 
-        def dp(k, n):
-            if k == 1:
-                return n
-            if n == 0:
-                return 0
+        m = 0
+        while dp[K][m] < N:
+            m += 1
+            for i in range(1, K+1):
+                dp[i][m] = dp[i][m - 1] + dp[i - 1][m - 1] + 1
+        return m
 
-            if (k, n) in d:
-                return d[(k, n)]
-
-            res = float('INF')
-
-            # 二分搜索
-            l, h = 1, n
-            while l <= h:
-                m = (l + h) // 2
-                b = dp(k - 1, m - 1)
-                nb = dp(k, n - m)
-
-                if b > nb:
-                    h = m - 1
-                    res = min(res, b + 1)
-                else:
-                    l = m + 1
-                    res = min(res, nb + 1)
-
-            d[(k, n)] = res
-            return res
-        return dp(K, N)
 # @lc code=end
 
 

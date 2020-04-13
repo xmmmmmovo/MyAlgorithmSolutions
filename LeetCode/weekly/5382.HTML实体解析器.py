@@ -4,9 +4,9 @@ class Solution:
         return text.replace('&frasl;', '/')\
             .replace('&lt;', '<')\
             .replace('&gt;', '>')\
-            .replace('&amp;', '&')\
             .replace('&quot;', '\"')\
-            .replace('&apos;', '\'')
+            .replace('&apos;', '\'')\
+            .replace('&amp;', '&')
 
 
 if __name__ == "__main__":

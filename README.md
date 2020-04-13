@@ -108,6 +108,8 @@
 
 [[72] 编辑距离](LeetCode/daily/dp/72.编辑距离.py)
 
+[[887] 鸡蛋掉落](LeetCode/daily/dp/887.鸡蛋掉落.py)
+
 [[1395]统计作战单位数](LeetCode/daily/dp/1395.统计作战单位数.py)
 
 [按摩师](LeetCode/daily/dp/面试题17.16.按摩师.py)
@@ -135,6 +137,8 @@
 [回文排列](LeetCode/daily/hash/面试题01.04.回文排列.py)
 
 ### 链表
+
+[[2] 两数相加](LeetCode/daily/list/2.两数相加.py)
 
 [**[206] 反转链表(经典题目)**](LeetCode/daily/list/206.反转链表.py)
 
