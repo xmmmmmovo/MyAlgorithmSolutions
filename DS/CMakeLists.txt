@@ -3,4 +3,5 @@ project(DS)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(DS main.cpp include/ds/vector.hpp include/ds/string.hpp)
+add_executable(vector_test test/vector_test.cpp)
+add_executable(iota_test test/iota_test.cpp)
