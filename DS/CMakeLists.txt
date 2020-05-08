@@ -4,4 +4,4 @@ project(DS)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(vector_test test/vector_test.cpp)
-add_executable(iota_test test/iota_test.cpp)
+add_executable(auto_test test/auto_test.cpp)
