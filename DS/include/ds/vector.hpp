@@ -5,130 +5,128 @@
 #ifndef DS_VECTOR_HPP
 #define DS_VECTOR_HPP
 
-#include <exception>
+#include <algorithm>
 #include <iostream>
-#include <string>
 
 namespace ds {
-using std::cout;
-using std::endl;
-using std::istream;
-using std::ostream;
-using std::string;
 
-template <typename T>
+using std::copy_n;
+using std::exchange;
+using std::max;
+using std::move;
+using std::size_t;
+
+template<typename T>
 class vector {
-  public:
-    vector();
+private:
+    T *first_ = nullptr;
+    T *last_  = nullptr;
+    T *end_   = nullptr;
 
-    virtual ~vector();
-
-    vector(size_t size);
-
-    vector(size_t size, T value);
-
-    size_t size();
-
-    void append(T x);
-
-    T &operator[](size_t index) {
-        int i = (int)index;
-        if (i > _size || i < -_size) {
-            throw std::out_of_range("数组越界 out of range");
-        }
-
-        if (i < 0) {
-            return elem[ _size + i ];
-        }
-
-        return elem[ i ];
+    void alloc_and_move(const size_t new_capacity) {
+        T *new_first = new T[ new_capacity ];
+        last_        = move(first_, last_, new_first);
+        delete[] first_;
+        first_ = new_first;
+        end_   = first_ + new_capacity;
     }
 
-    T &operator[](string s) {}
-
-    friend ostream &operator<<(ostream &o, vector<T> &v) {
-        int j = 0;
-        o << "[";
-        for (; j < v._size - 1; ++j) {
-            o << v.elem[ j ] << ", ";
-        }
-        o << v.elem[ j ] << "]";
-        return o;
+    size_t calcu_growth(const size_t new_size) const {
+        const size_t geometric = capacity() + capacity() / 2;
+        return max(geometric, new_size);
     }
 
-  private:
-    T *    elem;
-    size_t _size;
-    size_t it;
+    void grow_if_needed(const size_t new_size) {
+        if (new_size <= capacity()) {
+            return;
+        }
+        alloc_and_move(calcu_growth(new_size));
+    }
 
-    void _append(T &t);
+public:
+    vector() = default;
 
-    void _alloc();
+    explicit vector(const size_t size)
+        : first_(new T[ size ]()), last_(first_ + size) {}
+
+    ~vector() noexcept { delete[] first_; }
+
+    vector(const vector &other) {
+        first_ = new T[ other.size() ];
+        end_ = last_ = std::copy(other.first_, other.last_, first_);// 深拷贝
+    }
+
+    vector &operator=(const vector &other) {
+        if (&other == this) {
+            return *this;
+        }
+
+        delete[] first_;
+        first_ = new T[ other.size() ];
+        end_ = last_ = std::copy(other.first_, other.last_, first_);
+        return *this;
+    }
+
+    vector(const vector &&other) noexcept
+        : first_(exchange(other.first_, 0)),
+          last_(exchange(other.last_, nullptr)),
+          end_(exchange(other.end_, nullptr)) {}
+
+    vector &operator=(const vector &&other) {
+        delete[] first_;
+        first_ = std::exchange(other.first_, nullptr);
+        last_  = std::exchange(other.last_, nullptr);
+        end_   = std::exchange(other.end_, nullptr);
+        return *this;
+    }
+
+    T &operator[](const size_t index) {
+        return first_[ index ];
+    }
+
+    const T &operator[](const size_t index) const {
+        return first_[ index ];
+    }
+
+    size_t size() const {
+        return last_ - first_;
+    }
+
+    size_t capacity() const {
+        return end_ - first_;
+    }
+
+    T &emplace_back(const T &value) {
+        grow_if_needed(size() + 1);
+        return *last_++ = value;
+    }
+
+    T &emplace_back(T &&value) {
+        grow_if_needed(size() + 1);
+        return *last_++ = std::move(value);
+    }
+
+    void clear() {
+        last_ = first_;
+    }
+
+    void resize(const size_t new_size) {
+        reserve(new_size);
+    }
+
+    void reserve(const size_t new_capacity) {
+        if (new_capacity > capacity()) {
+            alloc_and_move(new_capacity);
+        }
+    }
+
+    void shrink_to_fit() {
+        if (capacity() != size()) {
+            alloc_and_move(size());
+        }
+    }
 };
 
-template <typename T>
-inline size_t vector<T>::size() {
-    return _size;
-}
+}// namespace ds
 
-template <typename T>
-vector<T>::vector() {
-    it    = 16; // 对齐
-    elem  = new T[ it ];
-    _size = 0;
-}
-
-template <typename T>
-vector<T>::~vector() {
-#ifdef DEBUG
-    cout << "析构函数执行" << endl;
-#endif
-}
-
-template <typename T>
-vector<T>::vector(size_t size) {
-    it    = size;
-    elem  = new T[ size ];
-    _size = 0;
-}
-
-template <typename T>
-vector<T>::vector(size_t size, T value) {
-    it   = size;
-    elem = new T[ size ];
-    for (int i = 0; i < size; ++i) {
-        elem[ i ] = value;
-    }
-    _size = size;
-}
-
-template <typename T>
-void vector<T>::append(T x) {
-    _append(x);
-}
-
-template <typename T>
-void vector<T>::_append(T &t) {
-    if (++_size > it) {
-        _alloc();
-    }
-    elem[ _size - 1 ] = t;
-}
-
-template <typename T>
-void vector<T>::_alloc() {
-    T *tmp = elem;
-    try {
-        elem = new T[ it <<= 2u ];
-    } catch (std::bad_alloc &e) {
-        throw e;
-    }
-    for (int i = 0; i < _size - 1; ++i) {
-        elem[ i ] = tmp[ i ];
-    }
-    delete[] tmp;
-}
-
-} // namespace ds
-
-#endif // DS_VECTOR_HPP
+#endif// DS_VECTOR_HPP
