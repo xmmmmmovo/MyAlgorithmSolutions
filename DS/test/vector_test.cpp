@@ -24,7 +24,7 @@ struct LifetimeLogger {
 int main(int argc, char *argv[]) {
     vector<int> v;
 
-    for (int i = 0; i < 2000; ++i) {
+    for (int i = 0; i < 100; ++i) {
         v.emplace_back(i);
         std::cout << "cap is : " << v.capacity() << std::endl;
     }
