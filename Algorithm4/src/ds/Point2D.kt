@@ -18,6 +18,6 @@ class Point2D constructor(
     }
 
     override fun toString(): String {
-        return "x=$x, y=$y"
+        return "x=${String.format("%.2f",x)}, y=${String.format("%.2f",y)}"
     }
 }
