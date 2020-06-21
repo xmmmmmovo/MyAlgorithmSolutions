@@ -1,9 +1,9 @@
 package ds
 
 class Accumulator constructor(
-    var total: Double = 0.0
+    private var total: Double = 0.0
 ) {
-    var times: Int = 0
+    private var times: Int = 0
 
     fun <T : Number> addDataValue(value: T) {
         total += value.toDouble()

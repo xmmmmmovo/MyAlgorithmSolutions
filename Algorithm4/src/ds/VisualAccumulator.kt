@@ -3,11 +3,11 @@ package ds
 import edu.princeton.cs.algs4.StdDraw
 
 class VisualAccumulator constructor(
-    val xMax: Int = 100,
-    val yMax: Double = 100.0
+    private val xMax: Int = 100,
+    private val yMax: Double = 100.0
 ) {
-    var times: Int = 0
-    var total: Double = 0.0
+    private var times: Int = 0
+    private var total: Double = 0.0
 
     init {
         StdDraw.setXscale(0.0, xMax.toDouble())

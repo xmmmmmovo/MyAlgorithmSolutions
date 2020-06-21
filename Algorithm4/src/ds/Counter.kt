@@ -1,8 +1,8 @@
 package ds
 
 class Counter constructor(
-    val tag: String = "",
-    var count: Int = 0
+    private val tag: String = "",
+    private var count: Int = 0
 ) : Comparable<Counter> {
 
     fun increment() {
