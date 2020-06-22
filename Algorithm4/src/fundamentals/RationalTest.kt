@@ -5,7 +5,5 @@ import utils.gcd
 import utils.qgcd
 
 fun main() {
-//    val r = Rational(0, 0)
-
-    println(qgcd(5, 6))
+    val r = Rational(2, 5)
 }
