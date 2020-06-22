@@ -7,32 +7,23 @@
 
 using namespace std;
 
-void coinChange(vector<int> &coins, int amount, int c_index, int count, int &ans) {
-    cout << c_index << " " << ans << endl;
-    if (amount == 0) {
-        ans = min(ans, count);
-        return;
-    }
-    if (c_index == coins.size())
-        return;
-
-    for (int k = amount / coins[ c_index ]; k >= 0 && k + count < ans; k--) {
-        coinChange(coins, amount - k * coins[ c_index ], c_index + 1, count + k, ans);
-    }
-}
-
-int coinChange(vector<int> &coins, int amount) {
-    if (amount == 0)
-        return 0;
-    sort(coins.rbegin(), coins.rend());
-    int ans = INT_MAX;
-    coinChange(coins, amount, 0, 0, ans);
-    return ans == INT_MAX ? -1 : ans;
+int qGCD(int a, int b)
+{
+	if(a == 0) return b;
+	if(b == 0) return a;
+	if(!(a & 1) && !(b & 1)) // a % 2 == 0 && b % 2 == 0;
+		return qGCD(a >> 1, b >> 1) << 1;
+	else if(!(b & 1))
+		return qGCD(a, b >> 1);
+	else if(!(a & 1))
+		return qGCD(a >> 1, b);
+	else
+		return qGCD(abs(a - b), min(a, b));
 }
 
 int main() {
-    vector<int> v;
-    v.emplace_back(1);
-    coinChange(v, 2);
+
+    cout << qGCD(5, 6) << endl;
+
     return 0;
 }

@@ -26,9 +26,11 @@ private fun qgcd_(a: Long, b: Long): Long {
     if (a == 0L) return b
     if (b == 0L) return a
 
-    if ((a and 1) != 0L && (b and 1) != 0L)
+    if ((a and 1) == 0L && (b and 1) == 0L)
         return qgcd_(a shr 1, b shr 1) shl 1
-    else if ((b and 1) != 0L)
+    else if ((b and 1) == 0L)
+        return qgcd_(a, b shr 1)
+    else if ((a and 1) == 0L)
         return qgcd_(a shr 1, b)
     else
         return qgcd_(abs(a - b), min(a, b))
