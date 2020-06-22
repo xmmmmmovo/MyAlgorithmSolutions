@@ -33,6 +33,10 @@ class Transaction : Comparable<Transaction> {
 
     }
 
+    fun who() = who
+    fun time() = time
+    fun amount() = amount
+
     private fun isAmountValid(amount: Double): Boolean {
         if (
             Double.NaN == amount ||
@@ -46,6 +50,10 @@ class Transaction : Comparable<Transaction> {
 
 
     override fun compareTo(other: Transaction): Int {
-        return 0
+        return compareValues(this.amount, other.amount)
+    }
+
+    override fun toString(): String {
+        return String.format("%-10s %10s %8.2f", who, time, amount)
     }
 }
