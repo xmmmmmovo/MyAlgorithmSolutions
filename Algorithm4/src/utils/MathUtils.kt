@@ -9,8 +9,8 @@ import kotlin.math.min
 fun <T : Number> gcd(a: T, b: T): Long {
     if (a == 0) return b.toLong()
     if (b == 0) return a.toLong()
-    var ta = a.toLong()
-    var tb = b.toLong()
+    var ta = abs(a.toLong())
+    var tb = abs(b.toLong())
     while (tb != 0L) {
         ta = tb.also {
             tb = ta % tb
@@ -41,5 +41,5 @@ fun <T : Number> qgcd(a: T, b: T): Long {
     if (b == 0) return a.toLong()
     var ta = a.toLong()
     var tb = b.toLong()
-    return qgcd_(ta, tb)
+    return qgcd_(abs(ta), abs(tb))
 }
