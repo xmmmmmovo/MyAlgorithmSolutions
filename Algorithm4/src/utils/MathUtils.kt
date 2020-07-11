@@ -48,7 +48,7 @@ fun <T : Number> qgcd(a: T, b: T): Long {
  * 四则运算(带括号)
  * */
 fun calcuArithmetic(expr: String): Double {
-
+    
 
     return 0.0
 }
