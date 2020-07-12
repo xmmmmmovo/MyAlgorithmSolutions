@@ -1,4 +1,0 @@
-package ds
-
-class FixedCapacotyStackOfStrings {
-}
