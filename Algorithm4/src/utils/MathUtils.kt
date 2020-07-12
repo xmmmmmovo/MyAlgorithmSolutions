@@ -44,8 +44,8 @@ private fun qgcd_(a: Long, b: Long): Long {
 fun <T : Number> qgcd(a: T, b: T): Long {
     if (a == 0) return b.toLong()
     if (b == 0) return a.toLong()
-    var ta = a.toLong()
-    var tb = b.toLong()
+    val ta = a.toLong()
+    val tb = b.toLong()
     return qgcd_(abs(ta), abs(tb))
 }
 
@@ -110,14 +110,14 @@ private fun evalPostfix(expr: String): Double {
     val s = Stack<Double>()
     expr.forEach { c: Char ->
         when (c) {
-            '+' -> s.pop()?.plus(s.pop()!!)?.let { s.push(it) }
-            '-' -> s.pop()?.minus(s.pop()!!)?.let { s.push(it) }
-            '*' -> s.pop()?.times(s.pop()!!)?.let { s.push(it) }
-            '/' -> s.pop()?.div(s.pop()!!)?.let { s.push(it) }
+            '+' -> s.pop().plus(s.pop()).let { s.push(it) }
+            '-' -> s.pop().minus(s.pop()).let { s.push(it) }
+            '*' -> s.pop().times(s.pop()).let { s.push(it) }
+            '/' -> s.pop().div(s.pop()).let { s.push(it) }
             else -> s.push(Character.getNumericValue(c).toDouble())
         }
     }
-    return if (s.isEmpty()) 0.0 else s.pop()!!
+    return if (s.isEmpty()) 0.0 else s.pop()
 }
 
 /**
@@ -144,4 +144,7 @@ fun isBanlanced(expr: String): Boolean {
     return true
 }
 
-
+fun compleBrackets(): String {
+    
+    return ""
+}

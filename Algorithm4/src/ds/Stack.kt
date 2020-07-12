@@ -17,21 +17,21 @@ class Stack<T> : Iterable<T> {
         n++
     }
 
-    fun pop(): T? {
+    fun pop(): T {
         if (isEmpty()) {
             throw NoSuchElementException("Stack underflow")
         }
         return first?.item.also {
             first = first?.next
             n--
-        }
+        }!!
     }
 
-    fun peek(): T? {
+    fun peek(): T {
         if (isEmpty()) {
             throw NoSuchElementException("Stack underflow")
         }
-        return first?.item
+        return first?.item!!
     }
 
     override fun toString(): String {

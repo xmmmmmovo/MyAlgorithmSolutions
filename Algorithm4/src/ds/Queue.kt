@@ -23,7 +23,7 @@ class Queue<T> : Iterable<T> {
         n++
     }
 
-    fun dequeue(): T? {
+    fun dequeue(): T {
         if (isEmpty()) {
             throw NoSuchElementException("Stack underflow")
         }
@@ -33,14 +33,14 @@ class Queue<T> : Iterable<T> {
             if (isEmpty()) {
                 last = null
             }
-        }
+        }!!
     }
 
-    fun peek(): T? {
+    fun peek(): T {
         if (isEmpty()) {
             throw NoSuchElementException("Stack underflow")
         }
-        return first?.item
+        return first?.item!!
     }
 
     override fun toString(): String {
