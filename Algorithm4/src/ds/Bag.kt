@@ -1,8 +1,5 @@
 package ds
 
-import edu.princeton.cs.algs4.StdIn
-import edu.princeton.cs.algs4.StdOut
-import java.util.*
 import kotlin.NoSuchElementException
 
 
@@ -24,7 +21,7 @@ class Bag<T> : Iterable<T> {
     }
 
     override fun iterator(): Iterator<T> {
-        return LinkedIterator<T>(first)
+        return LinkedIterator(first)
     }
 
     private data class Node<T>(
