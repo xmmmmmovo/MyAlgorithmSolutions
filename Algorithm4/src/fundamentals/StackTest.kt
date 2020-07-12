@@ -1,6 +1,7 @@
 package fundamentals
 
 import ds.Stack
+import utils.isBanlanced
 
 fun main() {
     val s = Stack<String>()
@@ -16,5 +17,6 @@ fun main() {
 
     println(s)
 
-
+    println(isBanlanced("{}"))
+    println(isBanlanced("{]"))
 }

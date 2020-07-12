@@ -126,9 +126,22 @@ private fun evalPostfix(expr: String): Double {
 fun evalIntArithmetic(expr: String): Double =
     evalPostfix(infixToPostfix(expr.trim().replace(" ", "")))
 
+/**
+ * 括号是否匹配
+ * */
+fun isBanlanced(expr: String): Boolean {
+    val s = Stack<Char>()
 
+    expr.forEach { c: Char ->
+        when (c) {
+            '(', '{', '[' -> s.push(c)
+            ')' -> if (s.isEmpty() || s.pop() != '(') return false
+            ']' -> if (s.isEmpty() || s.pop() != '[') return false
+            '}' -> if (s.isEmpty() || s.pop() != '{') return false
+        }
+    }
 
-
-
+    return true
+}
 
 
