@@ -44,10 +44,12 @@ class Stack<T> : Iterable<T> {
         return LinkedIterator(first)
     }
 
-    private data class Node<T>(
-        val item: T,
-        var next: Node<T>? = null
-    )
+    companion object {
+        private data class Node<T>(
+            val item: T,
+            var next: Node<T>? = null
+        )
+    }
 
     private class LinkedIterator<T>(
         private var current: Node<T>?

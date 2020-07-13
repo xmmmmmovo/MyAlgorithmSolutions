@@ -1,11 +1,16 @@
 package ds
 
 import java.util.LinkedList
+import java.util.Stack
 
-class LinkedList<T> : MutableIterable<T> {
+class LinkedList<T> : List<T> {
     private var first: Node<T>? = null
     private var last: Node<T>? = null
-    private var n: Int = 0
+    private var _size: Int = 0
+
+
+    override val size: Int
+        get() = _size
 
     fun getFirst(): T {
         if (first == null)
@@ -19,25 +24,63 @@ class LinkedList<T> : MutableIterable<T> {
         return last!!.item
     }
 
-    fun size() = n
-
-    fun a() {
-        LinkedList<Int>().remove()
+    override fun contains(element: T): Boolean {
+        TODO("Not yet implemented")
     }
 
-    override fun iterator(): MutableIterator<T> {
-        return DoublyLinkedIterator(first)
+    override fun containsAll(elements: Collection<T>): Boolean {
+        TODO("Not yet implemented")
     }
 
-    private data class Node<T>(
-        val item: T,
-        var next: Node<T>? = null,
-        var prev: Node<T>? = null
-    )
+    override fun get(index: Int): T {
+        TODO("Not yet implemented")
+    }
 
-    private class DoublyLinkedIterator<T>(
+    override fun indexOf(element: T): Int {
+        TODO("Not yet implemented")
+    }
+
+    override fun isEmpty(): Boolean {
+        TODO("Not yet implemented")
+
+    }
+
+    override fun lastIndexOf(element: T): Int {
+        TODO("Not yet implemented")
+
+    }
+
+    override fun iterator(): Iterator<T> {
+        TODO("Not yet implemented")
+
+    }
+
+    override fun listIterator(): ListIterator<T> {
+        TODO("Not yet implemented")
+
+    }
+
+    override fun listIterator(index: Int): ListIterator<T> {
+        TODO("Not yet implemented")
+
+    }
+
+    override fun subList(fromIndex: Int, toIndex: Int): List<T> {
+        TODO("Not yet implemented")
+
+    }
+
+    companion object {
+        private data class Node<T>(
+            val item: T,
+            var next: Node<T>? = null,
+            var prev: Node<T>? = null
+        )
+    }
+
+    private class LinkedListIterator<T>(
         private var current: Node<T>?
-    ) : MutableIterator<T> {
+    ) : ListIterator<T> {
         override fun hasNext(): Boolean {
             return current != null
         }
@@ -52,6 +95,27 @@ class LinkedList<T> : MutableIterable<T> {
         }
 
         override fun remove() {
+            TODO("Not yet implemented")
+
+        }
+
+        override fun hasPrevious(): Boolean {
+            TODO("Not yet implemented")
+
+        }
+
+        override fun nextIndex(): Int {
+            TODO("Not yet implemented")
+
+        }
+
+        override fun previous(): T {
+            TODO("Not yet implemented")
+
+        }
+
+        override fun previousIndex(): Int {
+            TODO("Not yet implemented")
 
         }
     }
