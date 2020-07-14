@@ -2,6 +2,7 @@ package ds
 
 import java.util.*
 import kotlin.NoSuchElementException
+import kotlin.collections.AbstractList
 
 class LinkedList<T> : MutableList<T> {
     private var first: Node<T>? = null
@@ -22,6 +23,16 @@ class LinkedList<T> : MutableList<T> {
             throw NoSuchElementException()
         return last!!.item
     }
+
+
+    override fun equals(other: Any?): Boolean {
+        if (other === this) return true
+        if (other !is List<*>) return false
+
+        return orderedEquals(this, other)
+    }
+
+    override fun hashCode(): Int = orderedHashCode(this)
 
     override fun add(element: T): Boolean {
         TODO("Not yet implemented")
@@ -106,7 +117,7 @@ class LinkedList<T> : MutableList<T> {
      * 返回迭代器
      * */
     override fun iterator(): MutableIterator<T> {
-        TODO("Not yet implemented")
+        return LinkedListIterator(first)
     }
 
     /**
@@ -132,17 +143,92 @@ class LinkedList<T> : MutableList<T> {
         TODO("Not yet implemented")
     }
 
-    companion object {
+
+    internal companion object {
         private data class Node<T>(
             val item: T,
             var next: Node<T>? = null,
             var prev: Node<T>? = null
         )
+
+        internal fun checkElementIndex(index: Int, size: Int) {
+            if (index < 0 || index >= size) {
+                throw IndexOutOfBoundsException("index: $index, size: $size")
+            }
+        }
+
+        internal fun checkPositionIndex(index: Int, size: Int) {
+            if (index < 0 || index > size) {
+                throw IndexOutOfBoundsException("index: $index, size: $size")
+            }
+        }
+
+        internal fun checkRangeIndexes(fromIndex: Int, toIndex: Int, size: Int) {
+            if (fromIndex < 0 || toIndex > size) {
+                throw IndexOutOfBoundsException("fromIndex: $fromIndex, toIndex: $toIndex, size: $size")
+            }
+            if (fromIndex > toIndex) {
+                throw IllegalArgumentException("fromIndex: $fromIndex > toIndex: $toIndex")
+            }
+        }
+
+        internal fun checkBoundsIndexes(startIndex: Int, endIndex: Int, size: Int) {
+            if (startIndex < 0 || endIndex > size) {
+                throw IndexOutOfBoundsException("startIndex: $startIndex, endIndex: $endIndex, size: $size")
+            }
+            if (startIndex > endIndex) {
+                throw IllegalArgumentException("startIndex: $startIndex > endIndex: $endIndex")
+            }
+        }
+
+        internal fun orderedHashCode(c: Collection<*>): Int {
+            var hashCode = 1
+            for (e in c) {
+                hashCode = 31 * hashCode + (e?.hashCode() ?: 0)
+            }
+            return hashCode
+        }
+
+        internal fun orderedEquals(c: Collection<*>, other: Collection<*>): Boolean {
+            if (c.size != other.size) return false
+
+            val otherIterator = other.iterator()
+            for (elem in c) {
+                val elemOther = otherIterator.next()
+                if (elem != elemOther) {
+                    return false
+                }
+            }
+            return true
+        }
     }
 
-    private class LinkedListIterator<T>(
-        private var current: Node<T>?
-    ) : MutableListIterator<T> {
+    private open inner class LinkedIterator<T>(
+        protected var current: Node<T>? = null,
+        protected var index: Int = 0
+    ) : MutableIterator<T> {
+
+        override fun hasNext(): Boolean {
+            if (index < _size) return true
+            return false
+        }
+
+        override fun next(): T {
+            if (!hasNext()) {
+                throw NoSuchElementException()
+            }
+            val item = current?.item
+            current = current?.next
+            index++
+            return item!!
+        }
+
+        override fun remove() {
+
+        }
+    }
+
+    private open inner class LinkedListIterator<T>(index: Int) : LinkedIterator<T>(), MutableListIterator<T> {
         override fun hasNext(): Boolean {
             return current != null
         }
@@ -173,10 +259,6 @@ class LinkedList<T> : MutableList<T> {
         }
 
         override fun add(element: T) {
-            TODO("Not yet implemented")
-        }
-
-        override fun remove() {
             TODO("Not yet implemented")
         }
 
