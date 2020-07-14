@@ -1,7 +1,6 @@
 package ds
 
-import utils.qgcd
-import kotlin.reflect.typeOf
+import algorithms.qgcd
 
 class Rational constructor(
     private var numerator: Long,

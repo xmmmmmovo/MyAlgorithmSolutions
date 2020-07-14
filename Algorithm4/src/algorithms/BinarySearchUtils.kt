@@ -1,4 +1,4 @@
-package utils
+package algorithms
 
 fun <T : Comparable<T>> binarySearch(list: List<T>, key: T): Int {
 

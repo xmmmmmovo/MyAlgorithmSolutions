@@ -1,9 +1,8 @@
-package utils
+package algorithms
 
 import ds.Stack
 import java.lang.StringBuilder
 import java.lang.UnsupportedOperationException
-import java.util.*
 import kotlin.collections.HashMap
 import kotlin.math.abs
 import kotlin.math.min
@@ -124,7 +123,11 @@ private fun evalPostfix(expr: String): Double {
  * 四则运算(带括号)
  * */
 fun evalIntArithmetic(expr: String): Double =
-    evalPostfix(infixToPostfix(expr.trim().replace(" ", "")))
+    evalPostfix(
+        infixToPostfix(
+            expr.trim().replace(" ", "")
+        )
+    )
 
 /**
  * 括号是否匹配

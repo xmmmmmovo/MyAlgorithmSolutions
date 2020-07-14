@@ -1,13 +1,12 @@
 package ds
 
-import java.util.LinkedList
-import java.util.Stack
+import java.util.*
+import kotlin.NoSuchElementException
 
-class LinkedList<T> : List<T> {
+class LinkedList<T> : MutableList<T> {
     private var first: Node<T>? = null
     private var last: Node<T>? = null
     private var _size: Int = 0
-
 
     override val size: Int
         get() = _size
@@ -24,50 +23,113 @@ class LinkedList<T> : List<T> {
         return last!!.item
     }
 
-    override fun contains(element: T): Boolean {
+    override fun add(element: T): Boolean {
         TODO("Not yet implemented")
+    }
+
+    override fun add(index: Int, element: T) {
+        TODO("Not yet implemented")
+    }
+
+    override fun addAll(index: Int, elements: Collection<T>): Boolean {
+        TODO("Not yet implemented")
+    }
+
+    override fun addAll(elements: Collection<T>): Boolean {
+        TODO("Not yet implemented")
+    }
+
+    override fun clear() {
+        TODO("Not yet implemented")
+    }
+
+    override fun remove(element: T): Boolean {
+        TODO("Not yet implemented")
+    }
+
+    override fun removeAll(elements: Collection<T>): Boolean {
+        TODO("Not yet implemented")
+    }
+
+    override fun removeAt(index: Int): T {
+        TODO("Not yet implemented")
+    }
+
+    override fun retainAll(elements: Collection<T>): Boolean {
+        TODO("Not yet implemented")
+    }
+
+    override fun set(index: Int, element: T): T {
+        TODO("Not yet implemented")
+    }
+
+    override fun contains(element: T): Boolean {
+        return indexOf(element) != -1
     }
 
     override fun containsAll(elements: Collection<T>): Boolean {
-        TODO("Not yet implemented")
+        return elements.all {
+            contains(it)
+        }
     }
 
     override fun get(index: Int): T {
-        TODO("Not yet implemented")
+        return first!!.item
     }
 
     override fun indexOf(element: T): Int {
-        TODO("Not yet implemented")
+        var index = 0
+        this.forEach {
+            if (it == element) {
+                return index
+            }
+            index++
+        }
+        return -1
     }
 
+    /**
+     * 链表是否为空
+     * */
     override fun isEmpty(): Boolean {
-        TODO("Not yet implemented")
-
+        return first == null
     }
 
+    /**
+     * 可以查到的最后一个元素
+     * */
     override fun lastIndexOf(element: T): Int {
         TODO("Not yet implemented")
-
     }
 
-    override fun iterator(): Iterator<T> {
+    /**
+     * 返回迭代器
+     * */
+    override fun iterator(): MutableIterator<T> {
+        TODO("Not yet implemented")
+    }
+
+    /**
+     * 返回列表迭代器
+     * */
+    override fun listIterator(): MutableListIterator<T> {
+        TODO("Not yet implemented")
+    }
+
+
+    /**
+     * 返回从某个index开始的迭代器
+     * */
+    override fun listIterator(index: Int): MutableListIterator<T> {
         TODO("Not yet implemented")
 
     }
 
-    override fun listIterator(): ListIterator<T> {
+    /**
+     * 返回子列表
+     * */
+    override fun subList(fromIndex: Int, toIndex: Int): MutableList<T> {
         TODO("Not yet implemented")
-
-    }
-
-    override fun listIterator(index: Int): ListIterator<T> {
-        TODO("Not yet implemented")
-
-    }
-
-    override fun subList(fromIndex: Int, toIndex: Int): List<T> {
-        TODO("Not yet implemented")
-
     }
 
     companion object {
@@ -80,7 +142,7 @@ class LinkedList<T> : List<T> {
 
     private class LinkedListIterator<T>(
         private var current: Node<T>?
-    ) : ListIterator<T> {
+    ) : MutableListIterator<T> {
         override fun hasNext(): Boolean {
             return current != null
         }
@@ -94,29 +156,32 @@ class LinkedList<T> : List<T> {
             return item!!
         }
 
-        override fun remove() {
-            TODO("Not yet implemented")
-
-        }
-
         override fun hasPrevious(): Boolean {
             TODO("Not yet implemented")
-
         }
 
         override fun nextIndex(): Int {
             TODO("Not yet implemented")
-
         }
 
         override fun previous(): T {
             TODO("Not yet implemented")
-
         }
 
         override fun previousIndex(): Int {
             TODO("Not yet implemented")
+        }
 
+        override fun add(element: T) {
+            TODO("Not yet implemented")
+        }
+
+        override fun remove() {
+            TODO("Not yet implemented")
+        }
+
+        override fun set(element: T) {
+            TODO("Not yet implemented")
         }
     }
 }

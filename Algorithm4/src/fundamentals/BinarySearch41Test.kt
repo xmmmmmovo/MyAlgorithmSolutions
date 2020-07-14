@@ -1,8 +1,8 @@
 package fundamentals
 
 import edu.princeton.cs.algs4.In
-import utils.binarySearch
-import utils.containsInList
+import algorithms.binarySearch
+import algorithms.containsInList
 import java.io.File
 
 fun main() {

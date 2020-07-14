@@ -1,6 +1,6 @@
 package fundamentals
 
-import utils.evalIntArithmetic
+import algorithms.evalIntArithmetic
 
 fun main() {
     println(evalIntArithmetic(""))

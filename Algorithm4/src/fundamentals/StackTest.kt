@@ -1,7 +1,7 @@
 package fundamentals
 
 import ds.Stack
-import utils.isBanlanced
+import algorithms.isBanlanced
 
 fun main() {
     val s = Stack<String>()
