@@ -2,17 +2,26 @@ package ds
 
 import kotlin.NoSuchElementException
 
+/**
+ *
+ * */
 class LinkedList<T> : MutableList<T> {
     private var first: Node<T>? = null
     private var last: Node<T>? = null
     private var _size: Int = 0
 
     override fun add(element: T): Boolean {
-        TODO("Not yet implemented")
+        linkedLast(element)
+        return true
     }
 
     override fun add(index: Int, element: T) {
-        TODO("Not yet implemented")
+        checkPositionIndex(index, size)
+        if (index == _size) {
+            linkedLast(element)
+        } else {
+            linkedBefore()
+        }
     }
 
     override fun addAll(index: Int, elements: Collection<T>): Boolean {
@@ -58,7 +67,7 @@ class LinkedList<T> : MutableList<T> {
     }
 
     override fun get(index: Int): T {
-        return first!!.item
+        TODO("Not yet implemented")
     }
 
     override fun indexOf(element: T): Int {
@@ -75,9 +84,7 @@ class LinkedList<T> : MutableList<T> {
     /**
      * 链表是否为空
      * */
-    override fun isEmpty(): Boolean {
-        return first == null
-    }
+    override fun isEmpty(): Boolean = _size == 0
 
     /**
      * 可以查到的最后一个元素
@@ -119,15 +126,14 @@ class LinkedList<T> : MutableList<T> {
         get() = _size
 
     fun getFirst(): T {
-        if (first == null)
-            throw NoSuchElementException()
-        return first!!.item
+        return first?.item ?: throw NoSuchElementException()
     }
 
     fun getLast(): T {
-        if (last == null)
-            throw NoSuchElementException()
-        return last!!.item
+        return last?.item ?: throw NoSuchElementException()
+    }
+
+    fun reverse() {
     }
 
     private fun getNode(index: Int): Node<T>? {
@@ -136,6 +142,56 @@ class LinkedList<T> : MutableList<T> {
             node = node?.next
         }
         return node!!
+    }
+
+    private fun linkedFirst() {
+    }
+
+    /**
+     * 连接到某节点前面
+     * */
+    private fun linkedBefore(item: T, node: Node<T>) {
+        
+    }
+
+    /**
+     * 连接到last
+     * */
+    private fun linkedLast(item: T) {
+        val l = last
+        val nNode = Node(item, l, null)
+        last = nNode
+
+        if (l == null) {
+            first = last
+        } else {
+            l.next = nNode
+        }
+        _size++
+    }
+
+    private fun unlinked(node: Node<T>): T {
+        val np = node.prev
+        val nn = node.next
+        val ne = node.item
+
+        if (np == null) {
+            first = nn
+        } else {
+            np.next = nn
+            node.prev = null
+        }
+
+        if (nn == null) {
+            last = np
+        } else {
+            nn.prev = np
+            node.next = null
+        }
+
+        node.item = null
+        _size--
+        return ne!!
     }
 
     override fun equals(other: Any?): Boolean {
@@ -154,24 +210,36 @@ class LinkedList<T> : MutableList<T> {
     }.toString()
 
     internal companion object {
+        /**
+         * 节点类
+         * */
         private data class Node<T>(
-            var item: T,
-            var next: Node<T>? = null,
-            var prev: Node<T>? = null
+            var item: T?,
+            var prev: Node<T>? = null,
+            var next: Node<T>? = null
         )
 
+        /**
+         * 查看element是否合法
+         * */
         internal fun checkElementIndex(index: Int, size: Int) {
             if (index < 0 || index >= size) {
                 throw IndexOutOfBoundsException("index: $index, size: $size")
             }
         }
 
+        /**
+         * 查看位置是否合法
+         * */
         internal fun checkPositionIndex(index: Int, size: Int) {
             if (index < 0 || index > size) {
                 throw IndexOutOfBoundsException("index: $index, size: $size")
             }
         }
 
+        /**
+         * 查看范围是否合法
+         *  */
         internal fun checkRangeIndexes(fromIndex: Int, toIndex: Int, size: Int) {
             if (fromIndex < 0 || toIndex > size) {
                 throw IndexOutOfBoundsException("fromIndex: $fromIndex, toIndex: $toIndex, size: $size")
@@ -181,6 +249,9 @@ class LinkedList<T> : MutableList<T> {
             }
         }
 
+        /**
+         * 查看边界是否合法
+         * */
         internal fun checkBoundsIndexes(startIndex: Int, endIndex: Int, size: Int) {
             if (startIndex < 0 || endIndex > size) {
                 throw IndexOutOfBoundsException("startIndex: $startIndex, endIndex: $endIndex, size: $size")
@@ -190,6 +261,9 @@ class LinkedList<T> : MutableList<T> {
             }
         }
 
+        /**
+         * 哈希函数
+         * */
         internal fun orderedHashCode(c: Collection<*>): Int {
             var hashCode = 1
             for (e in c) {
@@ -198,6 +272,9 @@ class LinkedList<T> : MutableList<T> {
             return hashCode
         }
 
+        /**
+         * 查看是否相等
+         * */
         internal fun orderedEquals(c: Collection<*>, other: Collection<*>): Boolean {
             if (c.size != other.size) return false
 
@@ -212,10 +289,9 @@ class LinkedList<T> : MutableList<T> {
         }
     }
 
-    private fun remove(index: Int, node: Node<T>?) {
-
-    }
-
+    /**
+     * 迭代器类
+     * */
     private open inner class LinkedIterator(
         protected var index: Int = 0,
         protected var current: Node<T>? = null
@@ -234,18 +310,12 @@ class LinkedList<T> : MutableList<T> {
         }
 
         override fun remove() {
-            when (index) {
-                0 -> throw IllegalStateException()
-                1 -> {
-                    this@LinkedList.remove(index, current)
-                }
-                _size -> {
-                }
-            }
         }
     }
 
-
+    /**
+     * 列表迭代器类
+     * */
     private open inner class LinkedListIterator(
         index: Int = 0,
         cur: Node<T>? = null
@@ -275,7 +345,9 @@ class LinkedList<T> : MutableList<T> {
         override fun previousIndex(): Int = index - 1
 
         override fun add(element: T) {
-            TODO("Not yet implemented")
+
+
+            index++
         }
 
         override fun set(element: T) {

@@ -5,6 +5,14 @@ class Queue<T> : Iterable<T> {
     private var last: Node<T>? = null
     private var n: Int = 0
 
+    constructor()
+
+    constructor(q: Queue<T>) {
+        for (i in q) {
+            enqueue(i)
+        }
+    }
+
     fun isEmpty(): Boolean = first == null
 
     fun size(): Int = n

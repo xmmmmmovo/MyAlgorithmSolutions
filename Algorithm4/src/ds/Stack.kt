@@ -4,6 +4,14 @@ class Stack<T> : Iterable<T> {
     private var first: Node<T>? = null
     private var n: Int = 0
 
+    constructor()
+
+    constructor(s: Stack<T>) {
+        for (i in s) {
+            push(i)
+        }
+    }
+
     fun isEmpty(): Boolean = first == null
 
     fun size(): Int = n
