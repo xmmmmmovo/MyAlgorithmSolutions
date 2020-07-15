@@ -2,7 +2,7 @@ package fundamentals
 
 data class tt(val string: String = "")
 
-fun main() {
+fun  test1() {
     var t = tt("11")
 
     var tmp = tt("22")
@@ -14,4 +14,12 @@ fun main() {
 
     for (i in 1..10)
         println(i)
+}
+
+fun main() {
+    var x = 0
+    for (i in 0..3) {
+        x++
+        println(x)
+    }
 }
