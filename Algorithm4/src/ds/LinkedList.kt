@@ -25,15 +25,63 @@ class LinkedList<T> : MutableList<T> {
     }
 
     override fun addAll(index: Int, elements: Collection<T>): Boolean {
-        TODO("Not yet implemented")
+        checkPositionIndex(index, size)
+
+        if (elements.isEmpty()) {
+            return false
+        }
+
+        // 这里的两个节点代表着插入节点的前后节点
+        var pred: Node<T>?
+        var succ: Node<T>?
+
+        // 判断是否是最尾部插入
+        if (index == _size) {
+            succ = null
+            pred = last
+        } else {
+            succ = getNode(index)
+            pred = succ.prev
+        }
+
+        for (e in elements) {
+            val nNode = Node(e, pred, null)
+            if (pred == null) {
+                // 说明是在首节点插入的
+                first = nNode
+            } else {
+                // 一直往后插入
+                pred.next = nNode
+            }
+            pred = nNode
+        }
+
+        if (succ == null) {
+            last = pred
+        } else {
+            pred!!.next = succ
+            succ.prev = pred
+        }
+
+        _size += elements.size
+        return true
     }
 
-    override fun addAll(elements: Collection<T>): Boolean {
-        TODO("Not yet implemented")
-    }
+    override fun addAll(elements: Collection<T>): Boolean =
+        addAll(_size, elements)
 
     override fun clear() {
-        TODO("Not yet implemented")
+        var n = first
+        while (n != null) {
+            val next = n.next
+            n.item = null
+            n.next = null
+            n.prev = null
+            n = next
+        }
+        first = null
+        last = null
+        _size = 0
     }
 
     override fun remove(element: T): Boolean {
@@ -119,21 +167,21 @@ class LinkedList<T> : MutableList<T> {
      * 返回子列表
      * */
     override fun subList(fromIndex: Int, toIndex: Int): MutableList<T> {
+        checkRangeIndexes(fromIndex, toIndex, size)
+
         TODO("Not yet implemented")
     }
 
     override val size: Int
         get() = _size
 
-    fun getFirst(): T {
-        return first?.item ?: throw NoSuchElementException()
-    }
+    fun getFirst(): T = first?.item ?: throw NoSuchElementException()
 
-    fun getLast(): T {
-        return last?.item ?: throw NoSuchElementException()
-    }
+    fun getLast(): T = last?.item ?: throw NoSuchElementException()
 
     fun reverse() {
+        // TODO: 反转链表
+        TODO("Not yet implemented")
     }
 
     fun addFirst(element: T) {
@@ -144,15 +192,9 @@ class LinkedList<T> : MutableList<T> {
         linkedLast(element)
     }
 
-    fun removeFirst(): T {
-        if (first == null) throw NoSuchElementException()
-        return unlinkFirst()
-    }
+    fun removeFirst(): T = unlinkFirst()
 
-    fun removeLast(): T {
-        if (last == null) throw NoSuchElementException()
-        return unlinkLast()
-    }
+    fun removeLast(): T = unlinkLast()
 
     /**
      * 获取某个节点
@@ -219,9 +261,38 @@ class LinkedList<T> : MutableList<T> {
     }
 
     private fun unlinkFirst(): T {
+        val f = first ?: throw NoSuchElementException()
+        val item = f.item
+        val next = f.next
+        // 快速GC
+        f.next = null
+        f.item = null
+        first = next
+        if (next == null) {
+            last = null
+        } else {
+            next.prev = null
+        }
+
+        _size--
+        return item!!
     }
 
     private fun unlinkLast(): T {
+        val l = last ?: throw NoSuchElementException()
+        val item = l.item
+        val prev = l.prev
+        // 快速GC
+        l.item = null
+        l.prev = null
+        last = prev
+        if (prev == null) {
+            first = null
+        } else {
+            prev.next = null
+        }
+        _size--
+        return item!!
     }
 
     private fun unlinked(node: Node<T>): T {
@@ -399,8 +470,6 @@ class LinkedList<T> : MutableList<T> {
         override fun previousIndex(): Int = index - 1
 
         override fun add(element: T) {
-
-
             index++
         }
 
