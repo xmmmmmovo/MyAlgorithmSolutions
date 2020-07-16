@@ -18,8 +18,7 @@ fun  test1() {
 
 fun main() {
     var x = 0
-    for (i in 0..3) {
-        x++
-        println(x)
+    for (i in 4 downTo 4) {
+        println(i)
     }
 }

@@ -20,7 +20,7 @@ class LinkedList<T> : MutableList<T> {
         if (index == _size) {
             linkedLast(element)
         } else {
-            linkedBefore()
+            linkedBefore(element, getNode(index))
         }
     }
 
@@ -67,7 +67,7 @@ class LinkedList<T> : MutableList<T> {
     }
 
     override fun get(index: Int): T {
-        TODO("Not yet implemented")
+        return getNode(index).item ?: throw NoSuchElementException()
     }
 
     override fun indexOf(element: T): Int {
@@ -136,22 +136,70 @@ class LinkedList<T> : MutableList<T> {
     fun reverse() {
     }
 
-    private fun getNode(index: Int): Node<T>? {
+    fun addFirst(element: T) {
+        linkedFirst(element)
+    }
+
+    fun addLast(element: T) {
+        linkedLast(element)
+    }
+
+    fun removeFirst(): T {
+        if (first == null) throw NoSuchElementException()
+        return unlinkFirst()
+    }
+
+    fun removeLast(): T {
+        if (last == null) throw NoSuchElementException()
+        return unlinkLast()
+    }
+
+    /**
+     * 获取某个节点
+     * 判断1/2的size然后从左往右或者从右往左查找
+     * */
+    private fun getNode(index: Int): Node<T> = if (index < (_size shr 1)) {
         var node = first
         for (i in 0 until index) {
             node = node?.next
         }
-        return node!!
+        node!!
+    } else {
+        var node = last
+        for (i in _size - 2 downTo index) {
+            node = node?.prev
+        }
+        node!!
     }
 
-    private fun linkedFirst() {
+    /**
+     * 连接到首节点
+     * */
+    private fun linkedFirst(item: T) {
+        val f = first
+        val nNode = Node(item, null, f)
+        first = nNode
+        if (f == null) {
+            last = nNode
+        } else {
+            f.prev = nNode
+        }
+        _size++
     }
 
     /**
      * 连接到某节点前面
      * */
     private fun linkedBefore(item: T, node: Node<T>) {
-        
+        val prev = node.prev
+        val nNode = Node(item, prev, node)
+        node.prev = nNode
+        if (prev == null) {
+            first = nNode
+        } else {
+            prev.next = nNode
+        }
+        _size++
     }
 
     /**
@@ -168,6 +216,12 @@ class LinkedList<T> : MutableList<T> {
             l.next = nNode
         }
         _size++
+    }
+
+    private fun unlinkFirst(): T {
+    }
+
+    private fun unlinkLast(): T {
     }
 
     private fun unlinked(node: Node<T>): T {
