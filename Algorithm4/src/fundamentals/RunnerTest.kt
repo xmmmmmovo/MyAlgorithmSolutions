@@ -1,6 +1,6 @@
 package fundamentals
 
-data class tt(val string: String = "")
+data class tt(var string: String = "")
 
 fun  test1() {
     var t = tt("11")
@@ -17,8 +17,7 @@ fun  test1() {
 }
 
 fun main() {
-    var x = 0
-    for (i in 4 downTo 4) {
-        println(i)
-    }
+    val a = listOf<String>("111", "222")
+    val b = listOf<String>()
+    println(b.all { a.contains(it) })
 }

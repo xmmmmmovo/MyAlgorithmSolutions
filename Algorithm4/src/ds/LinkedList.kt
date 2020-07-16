@@ -1,9 +1,10 @@
 package ds
 
+import com.sun.org.apache.xpath.internal.operations.Bool
 import kotlin.NoSuchElementException
 
 /**
- *
+ * 双向链表
  * */
 class LinkedList<T> : MutableList<T> {
     private var first: Node<T>? = null
@@ -100,37 +101,83 @@ class LinkedList<T> : MutableList<T> {
         _size = 0
     }
 
+    /**
+     * 删除为[element]的节点
+     * */
     override fun remove(element: T): Boolean {
-        TODO("Not yet implemented")
+        var node = first
+        while (node != null) {
+            if (node.item == element) {
+                unlink(node)
+                return true
+            }
+            node = node.next
+        }
+
+        return false
     }
 
-    override fun removeAll(elements: Collection<T>): Boolean {
-        TODO("Not yet implemented")
-    }
+    /**
+     * 删除
+     * */
+    override fun removeAll(elements: Collection<T>): Boolean =
+        if (containsAll(elements)) elements.all {
+            remove(it)
+        } else false
 
+
+    /**
+     * 删除[index]位置的节点
+     * */
     override fun removeAt(index: Int): T {
-        TODO("Not yet implemented")
+        checkElementIndex(index, size)
+        val node = getNode(index)
+        val item = node.item
+        unlink(node)
+        return item ?: throw NoSuchElementException()
     }
 
-    override fun retainAll(elements: Collection<T>): Boolean {
-        TODO("Not yet implemented")
-    }
+    override fun retainAll(elements: Collection<T>): Boolean =
+        if (containsAll(elements)) {
+            clear()
+            addAll(elements)
+        } else false
 
+    /**
+     * 设定[index]为[element]并返回旧值
+     * */
     override fun set(index: Int, element: T): T {
-        TODO("Not yet implemented")
+        checkElementIndex(index, size)
+        return getNode(index).run {
+            item!!.also {
+                item = element
+            }
+        }
     }
 
+    /**
+     * 是否包含[element]
+     * */
     override fun contains(element: T): Boolean {
         return indexOf(element) != -1
     }
 
-    override fun containsAll(elements: Collection<T>): Boolean {
-        return elements.all {
-            contains(it)
-        }
-    }
+    /**
+     * 是否包含所有[elements]
+     * */
+    override fun containsAll(elements: Collection<T>): Boolean =
+        if (elements.isEmpty())
+            false
+        else
+            elements.all {
+                contains(it)
+            }
 
+    /**
+     * 获取[index]节点数据
+     * */
     override fun get(index: Int): T {
+        checkElementIndex(index, size)
         return getNode(index).item ?: throw NoSuchElementException()
     }
 
@@ -154,7 +201,16 @@ class LinkedList<T> : MutableList<T> {
      * 可以查到的最后一个元素
      * */
     override fun lastIndexOf(element: T): Int {
-        TODO("Not yet implemented")
+        var index = _size - 1
+        var node = last
+        while (node != null) {
+            if (node.item == element) {
+                return index
+            }
+            index--
+            node = node.prev
+        }
+        return index
     }
 
     /**
@@ -176,6 +232,7 @@ class LinkedList<T> : MutableList<T> {
      * 返回从某个index开始的迭代器
      * */
     override fun listIterator(index: Int): MutableListIterator<T> {
+        checkElementIndex(index, size)
         return LinkedListIterator(index, getNode(index))
     }
 
@@ -184,8 +241,15 @@ class LinkedList<T> : MutableList<T> {
      * */
     override fun subList(fromIndex: Int, toIndex: Int): MutableList<T> {
         checkRangeIndexes(fromIndex, toIndex, size)
-
-        TODO("Not yet implemented")
+        val res = LinkedList<T>()
+        var i = fromIndex
+        var n = getNode(fromIndex)
+        while (i < toIndex) {
+            res.add(n.item!!)
+            i++
+            n = n.next!!
+        }
+        return res
     }
 
     /**
@@ -344,7 +408,7 @@ class LinkedList<T> : MutableList<T> {
     /**
      * 解连接
      * */
-    private fun unlinked(node: Node<T>): T {
+    private fun unlink(node: Node<T>): T {
         val np = node.prev
         val nn = node.next
         val ne = node.item
