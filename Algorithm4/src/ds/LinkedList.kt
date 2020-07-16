@@ -10,11 +10,17 @@ class LinkedList<T> : MutableList<T> {
     private var last: Node<T>? = null
     private var _size: Int = 0
 
+    /**
+     * 在尾部插入[element]
+     * */
     override fun add(element: T): Boolean {
         linkedLast(element)
         return true
     }
 
+    /**
+     * 让[element]成为[index]位置的节点
+     * */
     override fun add(index: Int, element: T) {
         checkPositionIndex(index, size)
         if (index == _size) {
@@ -24,6 +30,9 @@ class LinkedList<T> : MutableList<T> {
         }
     }
 
+    /**
+     * 让[index]位置成为[elements]的第一个节点位置
+     * */
     override fun addAll(index: Int, elements: Collection<T>): Boolean {
         checkPositionIndex(index, size)
 
@@ -67,13 +76,20 @@ class LinkedList<T> : MutableList<T> {
         return true
     }
 
+    /**
+     * 在尾部添加[elements]
+     * */
     override fun addAll(elements: Collection<T>): Boolean =
         addAll(_size, elements)
 
+    /**
+     * 清除所有节点
+     * */
     override fun clear() {
         var n = first
         while (n != null) {
             val next = n.next
+            // 快速gc
             n.item = null
             n.next = null
             n.prev = null
@@ -172,28 +188,52 @@ class LinkedList<T> : MutableList<T> {
         TODO("Not yet implemented")
     }
 
+    /**
+     * 获取链表长度
+     * */
     override val size: Int
         get() = _size
 
+    /**
+     * 获取首节点数据
+     * */
     fun getFirst(): T = first?.item ?: throw NoSuchElementException()
 
+    /**
+     * 获取尾节点数据
+     * */
     fun getLast(): T = last?.item ?: throw NoSuchElementException()
 
+    /**
+     * 反转链表
+     * */
     fun reverse() {
         // TODO: 反转链表
         TODO("Not yet implemented")
     }
 
+    /**
+     * 添加首节点
+     * */
     fun addFirst(element: T) {
         linkedFirst(element)
     }
 
+    /**
+     * 添加尾节点
+     * */
     fun addLast(element: T) {
         linkedLast(element)
     }
 
+    /**
+     * 删除首节点
+     * */
     fun removeFirst(): T = unlinkFirst()
 
+    /**
+     * 删除尾节点
+     * */
     fun removeLast(): T = unlinkLast()
 
     /**
@@ -215,7 +255,7 @@ class LinkedList<T> : MutableList<T> {
     }
 
     /**
-     * 连接到首节点
+     * 连接首节点
      * */
     private fun linkedFirst(item: T) {
         val f = first
@@ -230,7 +270,7 @@ class LinkedList<T> : MutableList<T> {
     }
 
     /**
-     * 连接到某节点前面
+     * 连接到[node]节点前面
      * */
     private fun linkedBefore(item: T, node: Node<T>) {
         val prev = node.prev
@@ -245,7 +285,7 @@ class LinkedList<T> : MutableList<T> {
     }
 
     /**
-     * 连接到last
+     * 连接尾节点
      * */
     private fun linkedLast(item: T) {
         val l = last
@@ -260,6 +300,9 @@ class LinkedList<T> : MutableList<T> {
         _size++
     }
 
+    /**
+     * 解除首部连接
+     * */
     private fun unlinkFirst(): T {
         val f = first ?: throw NoSuchElementException()
         val item = f.item
@@ -278,6 +321,9 @@ class LinkedList<T> : MutableList<T> {
         return item!!
     }
 
+    /**
+     * 解除尾部连接
+     * */
     private fun unlinkLast(): T {
         val l = last ?: throw NoSuchElementException()
         val item = l.item
@@ -295,6 +341,9 @@ class LinkedList<T> : MutableList<T> {
         return item!!
     }
 
+    /**
+     * 解连接
+     * */
     private fun unlinked(node: Node<T>): T {
         val np = node.prev
         val nn = node.next
@@ -319,6 +368,9 @@ class LinkedList<T> : MutableList<T> {
         return ne!!
     }
 
+    /**
+     * " == " 方法
+     * */
     override fun equals(other: Any?): Boolean {
         if (other === this) return true
         if (other !is List<*>) return false
@@ -326,8 +378,14 @@ class LinkedList<T> : MutableList<T> {
         return orderedEquals(this, other)
     }
 
+    /**
+     * hash计算
+     * */
     override fun hashCode(): Int = orderedHashCode(this)
 
+    /**
+     * 转字符串方法
+     * */
     override fun toString(): String = StringBuilder().also {
         it.append("[ ")
         this.forEach { item -> it.append("$item ") }
