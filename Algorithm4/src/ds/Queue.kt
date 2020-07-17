@@ -1,5 +1,8 @@
 package ds
 
+/**
+ * 单项队列类
+ * */
 class Queue<T> : Iterable<T> {
     private var first: Node<T>? = null
     private var last: Node<T>? = null
@@ -74,10 +77,6 @@ class Queue<T> : Iterable<T> {
 
         override fun hasNext(): Boolean {
             return current != null
-        }
-
-        fun remove() {
-            throw UnsupportedOperationException()
         }
 
         override fun next(): T {

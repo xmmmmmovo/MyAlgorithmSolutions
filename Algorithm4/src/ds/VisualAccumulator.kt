@@ -3,6 +3,9 @@ package ds
 import edu.princeton.cs.algs4.StdDraw
 import kotlin.math.sqrt
 
+/**
+ * 可视化累加器
+ * */
 class VisualAccumulator constructor(
     private val xMax: Int = 100,
     private val yMax: Double = 100.0

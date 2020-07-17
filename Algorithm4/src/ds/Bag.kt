@@ -4,10 +4,19 @@ class Bag<T> : Iterable<T> {
     private var first: Node<T>? = null
     private var n: Int = 0
 
+    /**
+     * 是否为空
+     * */
     fun isEmpty(): Boolean = first == null
 
+    /**
+     * 返回长度
+     * */
     fun size(): Int = n
 
+    /**
+     * 添加元素
+     * */
     fun add(item: T) {
         val oi = first
         first = Node(
@@ -32,10 +41,6 @@ class Bag<T> : Iterable<T> {
 
         override fun hasNext(): Boolean {
             return current != null
-        }
-
-        fun remove() {
-            throw UnsupportedOperationException()
         }
 
         override fun next(): T {

@@ -1,5 +1,8 @@
 package ds
 
+/**
+ * 栈类
+ * */
 class Stack<T> : Iterable<T> {
     private var first: Node<T>? = null
     private var n: Int = 0
@@ -12,10 +15,19 @@ class Stack<T> : Iterable<T> {
         }
     }
 
+    /**
+     * 是否空
+     * */
     fun isEmpty(): Boolean = first == null
 
+    /**
+     * 栈大小
+     * */
     fun size(): Int = n
 
+    /**
+     * 入栈
+     * */
     fun push(item: T) {
         val oi = first
         first = Node(
@@ -25,6 +37,9 @@ class Stack<T> : Iterable<T> {
         n++
     }
 
+    /**
+     * 出栈
+     * */
     fun pop(): T {
         if (isEmpty()) {
             throw NoSuchElementException("Stack underflow")
@@ -35,6 +50,9 @@ class Stack<T> : Iterable<T> {
         }!!
     }
 
+    /**
+     * 看栈顶
+     * */
     fun peek(): T {
         if (isEmpty()) {
             throw NoSuchElementException("Stack underflow")
@@ -65,10 +83,6 @@ class Stack<T> : Iterable<T> {
 
         override fun hasNext(): Boolean {
             return current != null
-        }
-
-        fun remove() {
-            throw UnsupportedOperationException()
         }
 
         override fun next(): T {

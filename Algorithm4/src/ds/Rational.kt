@@ -2,6 +2,9 @@ package ds
 
 import algorithms.qgcd
 
+/**
+ * 分数类
+ * */
 class Rational constructor(
     private var numerator: Long,
     private var denominator: Long = 1L
@@ -22,6 +25,9 @@ class Rational constructor(
         return denominator
     }
 
+    /**
+     * 化简
+     * */
     private fun simplify() {
         val g = qgcd(numerator, denominator)
         numerator /= g
@@ -32,6 +38,9 @@ class Rational constructor(
         }
     }
 
+    /**
+     * 加号重载
+     * */
     public operator fun plus(other: Rational): Rational {
         if (this.numerator == 0L) return other
         if (other.numerator == 0L) return this
@@ -42,6 +51,9 @@ class Rational constructor(
         )
     }
 
+    /**
+     * 减号重载
+     * */
     public operator fun minus(other: Rational): Rational {
         if (this.numerator == 0L) return other
         if (other.numerator == 0L) return this
@@ -53,6 +65,9 @@ class Rational constructor(
         )
     }
 
+    /**
+     * 乘号重载
+     * */
     public operator fun times(other: Rational): Rational {
         return Rational(
             this.numerator * other.numerator,
@@ -60,6 +75,9 @@ class Rational constructor(
         )
     }
 
+    /**
+     * 除号重载
+     * */
     public operator fun div(other: Rational): Rational {
         return Rational(
             this.numerator * other.denominator,

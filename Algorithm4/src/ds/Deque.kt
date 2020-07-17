@@ -2,6 +2,9 @@ package ds
 
 import java.util.Deque
 
+/**
+ * 双向队列类
+ * */
 class Deque<T> : Iterable<T> {
     private val list = LinkedList<T>()
 

@@ -21,12 +21,24 @@ class Accumulator constructor(
         mean += (dv - mean) / times
     }
 
+    /**
+     * 平均数
+     * */
     fun mean(): Double = mean
 
+    /**
+     * 方差
+     * */
     fun variance(): Double = if (times <= 1) Double.NaN else s / (times - 1)
 
+    /**
+     * 平均差
+     * */
     fun stddev(): Double = sqrt(variance())
 
+    /**
+     * 和
+     * */
     fun total(): Double = total
 
     override fun toString(): String {

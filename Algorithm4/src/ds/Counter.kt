@@ -5,10 +5,16 @@ class Counter constructor(
     private var count: Int = 0
 ) : Comparable<Counter> {
 
+    /**
+     * 计数器+1
+     * */
     fun increment() {
         count += 1
     }
 
+    /**
+     * 结尾多少count
+     * */
     fun tally(): Int = count
 
     override fun compareTo(other: Counter): Int {

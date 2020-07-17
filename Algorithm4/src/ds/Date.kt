@@ -5,6 +5,9 @@ class Date : Comparable<Date> {
     private val month: Int
     private val day: Int
 
+    /**
+     * 直接输入年月日
+     * */
     constructor(
         y: Int = 0,
         m: Int = 0,
@@ -17,6 +20,9 @@ class Date : Comparable<Date> {
         day = d
     }
 
+    /**
+     * 字符串解析
+     * */
     constructor(
         parseString: String
     ) {
@@ -34,9 +40,13 @@ class Date : Comparable<Date> {
     }
 
     companion object {
+        // 每月天数
         val monthDayList = listOf(0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
     }
 
+    /**
+     * 日期是否合法
+     * */
     private fun isDateValid(d: Int, m: Int, y: Int): Boolean {
         if (m > 12 || m < 1) {
             return false
@@ -50,8 +60,10 @@ class Date : Comparable<Date> {
         return true
     }
 
-    // is y a leap year?
-    fun isLeapYear(y: Int): Boolean {
+    /**
+     * 判断是否是闰年
+     * */
+    private fun isLeapYear(y: Int): Boolean {
         if (y % 400 == 0) return true
         if (y % 100 == 0) return false
         return y % 4 == 0

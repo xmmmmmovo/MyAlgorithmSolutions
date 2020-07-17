@@ -1,5 +1,8 @@
 package ds
 
+/**
+ * 收据类
+ * */
 class Transaction : Comparable<Transaction> {
     private val who: String
     private val time: Date

@@ -4,14 +4,23 @@ class Buffer {
     private val ls = Stack<Char>()
     private val rs = Stack<Char>()
 
+    /**
+     * 光标处插入
+     * */
     fun insert(c: Char) {
         ls.push(c)
     }
 
+    /**
+     * 光标左边删除
+     * */
     fun delete(): Char =
         if (ls.size() == 0) throw NoSuchElementException("无法删除")
         else ls.pop()
 
+    /**
+     * 光标左移
+     * */
     fun left(k: Int) {
         if (k > ls.size()) throw IllegalArgumentException("无法到达")
         for (i in 1..k) {
@@ -19,6 +28,9 @@ class Buffer {
         }
     }
 
+    /**
+     * 光标右移
+     * */
     fun right(k: Int) {
         if (k > rs.size()) throw IllegalArgumentException("无法到达")
         for (i in 1..k) {
@@ -26,6 +38,9 @@ class Buffer {
         }
     }
 
+    /**
+     * 返回buffer大小
+     * */
     val size: Int
         get() = ls.size() + rs.size()
 
