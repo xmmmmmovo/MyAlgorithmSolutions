@@ -217,14 +217,14 @@ class LinkedList<T> : MutableList<T> {
      * 返回迭代器
      * */
     override fun iterator(): MutableIterator<T> {
-        return LinkedIterator(0, first)
+        return LinkedIterator(0)
     }
 
     /**
      * 返回列表迭代器
      * */
     override fun listIterator(): MutableListIterator<T> {
-        return LinkedListIterator(0, first)
+        return LinkedListIterator(0)
     }
 
 
@@ -233,7 +233,7 @@ class LinkedList<T> : MutableList<T> {
      * */
     override fun listIterator(index: Int): MutableListIterator<T> {
         checkElementIndex(index, size)
-        return LinkedListIterator(index, getNode(index))
+        return LinkedListIterator(index)
     }
 
     /**
@@ -272,8 +272,20 @@ class LinkedList<T> : MutableList<T> {
      * 反转链表
      * */
     fun reverse() {
-        // TODO: 反转链表
-        TODO("Not yet implemented")
+        if (first == null) {
+            return
+        }
+        first = last.also {
+            last = first
+        }
+        var n = first
+
+        while (n != null) {
+            n.prev = n.next.also {
+                n!!.next = n!!.prev
+            }
+            n = n.next
+        }
     }
 
     /**
@@ -540,23 +552,41 @@ class LinkedList<T> : MutableList<T> {
      * 迭代器类
      * */
     private open inner class LinkedIterator(
-        protected var index: Int = 0,
-        protected var current: Node<T>? = null
+        protected var index: Int = 0
     ) : MutableIterator<T> {
+        protected var lastReturned: Node<T>? = null
+        protected var current: Node<T>? = null
 
+        init {
+            checkPositionIndex(index, _size)
+            current = if (index == _size) null else getNode(index)
+        }
+
+        /**
+         * 是否存在下一个节点
+         * */
         override fun hasNext(): Boolean = index < _size
 
+        /**
+         * 下一节点数据
+         * */
         override fun next(): T {
             if (!hasNext()) {
                 throw NoSuchElementException()
             }
-            val item = current?.item
+            lastReturned = current
             current = current?.next
             index++
-            return item!!
+            return lastReturned?.item ?: throw NoSuchElementException()
         }
 
+        /**
+         * 删除当前节点
+         * */
         override fun remove() {
+            val lastNext = lastReturned?.next
+            unlink(lastReturned ?: throw IllegalStateException())
+            index--
         }
     }
 
@@ -564,38 +594,57 @@ class LinkedList<T> : MutableList<T> {
      * 列表迭代器类
      * */
     private open inner class LinkedListIterator(
-        index: Int = 0,
-        cur: Node<T>? = null
+        index: Int = 0
     ) : LinkedIterator(
-        index,
-        cur
+        index
     ), MutableListIterator<T> {
 
-        init {
-            checkPositionIndex(index, _size)
-        }
-
+        /**
+         * 是否有上一节点
+         * */
         override fun hasPrevious(): Boolean = index > 0
 
+        /**
+         * 下一节点游标
+         * */
         override fun nextIndex(): Int = index
 
+        /**
+         * 返回上一节点
+         * */
         override fun previous(): T {
             if (!hasPrevious()) {
                 throw NoSuchElementException()
             }
-            val item = current?.item
-            current = current?.prev
-            index--
-            return item!!
+            current = if (current == null) last else current!!.prev
+            lastReturned = current
+            return lastReturned?.item ?: throw NoSuchElementException()
         }
 
+        /**
+         * 下一节点游标
+         * */
         override fun previousIndex(): Int = index - 1
 
+        /**
+         * 添加节点
+         * */
         override fun add(element: T) {
+            lastReturned = null
+            if (current == null) {
+                linkedLast(element)
+            } else {
+                linkedBefore(element, current!!)
+            }
             index++
         }
 
+        /**
+         * 设置节点
+         * */
         override fun set(element: T) {
+            if (lastReturned == null)
+                throw IllegalStateException()
             current!!.item = element
         }
     }

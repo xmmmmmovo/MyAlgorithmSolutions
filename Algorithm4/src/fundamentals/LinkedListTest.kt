@@ -9,13 +9,15 @@ fun main() {
     for (i in 1..10)
         ll.add(i)
     println(ll)
+    ll.reverse()
+    println(ll)
 
-    val numbers = mutableListOf<String>("aaaa")
-    val mutableListIterator = numbers.listIterator()
-
-    numbers.add(0, "1")
-    numbers.add(1, "1")
-    println(numbers)
+//    val numbers = mutableListOf<String>("aaaa")
+//    val mutableListIterator = numbers.listIterator()
+//
+//    numbers.add(0, "1")
+//    numbers.add(1, "1")
+//    println(numbers)
 
 //    mutableListIterator.add("two")
 //    println(numbers)
@@ -26,14 +28,4 @@ fun main() {
 ////    println(mutableListIterator.next())
 ////    println(mutableListIterator.previous())
 //    println(numbers)
-//
-//
-//    var first: N? = N(1)
-//    var second: N? = null
-//
-//    println("f$first,s$second")
-//    second = first
-//    println("f$first,s$second")
-//    second = N(2)
-//    println("f$first,s$second")
 }
