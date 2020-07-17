@@ -1,5 +1,7 @@
 package fundamentals
 
+import ds.Buffer
+
 data class tt(var string: String = "")
 
 fun test1() {

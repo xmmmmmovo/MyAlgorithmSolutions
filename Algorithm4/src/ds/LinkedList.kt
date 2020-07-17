@@ -1,6 +1,5 @@
 package ds
 
-import com.sun.org.apache.xpath.internal.operations.Bool
 import kotlin.NoSuchElementException
 
 /**
@@ -465,7 +464,7 @@ class LinkedList<T> : MutableList<T> {
     override fun toString(): String = StringBuilder().also {
         it.append("[ ")
         this.forEach { item -> it.append("$item ") }
-        it.append(" ]")
+        it.append("]")
     }.toString()
 
     internal companion object {
@@ -618,6 +617,7 @@ class LinkedList<T> : MutableList<T> {
             }
             current = if (current == null) last else current!!.prev
             lastReturned = current
+            index--
             return lastReturned?.item ?: throw NoSuchElementException()
         }
 
