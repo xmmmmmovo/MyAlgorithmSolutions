@@ -1,5 +1,6 @@
 package fundamentals
 
+import algorithms.fourSumForce
 import ds.Buffer
 
 data class tt(var string: String = "")
@@ -19,4 +20,6 @@ fun test1() {
 }
 
 fun main() {
+    fourSumForce(listOf(1, 2, 3, 4, 5), 1)
+
 }
