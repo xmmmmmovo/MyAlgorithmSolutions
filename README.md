@@ -12,14 +12,6 @@
 
 [向量](DS/include/ds/vector.hpp)
 
-## 算法(第四版)
-
-[数据下载](http://algs4.cs.princeton.edu/code/algs4-data.zip)
-
-[数据结构](Algorithm4/src/ds)
-
-[第一章: 基础](Algorithm4/src/fundamentals)
-
 ## 大一题目
 
 [山门口](FreshmanAlgorithm/2017%20freshman%20competition/2山门口.c)
