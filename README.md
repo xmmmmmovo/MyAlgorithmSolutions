@@ -12,6 +12,12 @@
 
 [向量](DS/include/ds/vector.hpp)
 
+## 算法(第四版)
+
+[题解](https://blog.fivezha.cn/categories/algorithm4/)
+
+[代码](https://github.com/xmmmmmovo/Algorithms4thSolutions)
+
 ## 大一题目
 
 [山门口](FreshmanAlgorithm/2017%20freshman%20competition/2山门口.c)
