@@ -16,7 +16,7 @@
 
 [题解](https://blog.fivezha.cn/categories/algorithm4/)
 
-[代码](https://github.com/xmmmmmovo/Algorithms4thSolutions)
+[代码](https://github.com/xmmmmmovo/Algorithms4thKotlinSolutions)
 
 ## 大一题目
 
