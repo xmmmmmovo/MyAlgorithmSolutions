@@ -5,11 +5,19 @@ import kotlin.test.assertEquals
 
 class Solution {
     fun mostVisited(n: Int, rounds: IntArray): List<Int> {
-        val res = LinkedList<Int>()
-
-        
-
-        return 0
+        return when {
+            rounds.first() == rounds.last() -> listOf(rounds.first())
+            rounds.first() > rounds.last() -> {
+                val res = mutableListOf<Int>()
+                for (i in 1..rounds.last()) res.add(i)
+                for (i in rounds.first()..n) res.add(i)
+                res
+            }
+            rounds.first() < rounds.last() -> {
+                List(rounds.last() - rounds.first() + 1) { it + rounds.first() }
+            }
+            else -> emptyList()
+        }
     }
 }
 
