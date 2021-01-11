@@ -40,6 +40,7 @@ int main() {
     while (m--) {
         int x;
         scanf("%d", &x);
+        // 取左边界
         int l = 0, r = n - 1;
         while (l < r) {
             int mid = (l + r) >> 1;
@@ -51,6 +52,7 @@ int main() {
         if (q[l] != x) printf("-1 -1\n");
         else {
             printf("%d ", l);
+            // 取右边界
             int l = 0, r = n - 1;
             while (l < r) {
                 int mid = (l + r + 1) >> 1;
