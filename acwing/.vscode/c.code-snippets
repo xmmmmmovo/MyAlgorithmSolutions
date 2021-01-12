@@ -9,7 +9,7 @@
 		"prefix": "announce",
 		"body": [
 			"/**",
-			" * author: ", 
+			" * author: xmmmmmovo", 
 			" * generation time: $CURRENT_YEAR/$CURRENT_MONTH/$CURRENT_DATE",
 			" * filename: $TM_FILENAME",
 			" * language & build version : C 11 & C++ 17",
@@ -31,13 +31,13 @@
 	},
 	"printf":{
 		"prefix": "printf",
-		"body": "printf(\"${1:%s }\\n\", $2);$3",
+		"body": "printf(\"${1:%s}\", $2);$3",
 		"description": "输出函数",
 		"scope": "c, cpp"
 	},
 	"scanf":{
 		"prefix": "scanf",
-		"body": "scanf(\"${1:%s}\\n\", $2);$3",
+		"body": "scanf(\"${1:%s}\", $2);$3",
 		"description": "输入函数",
 		"scope": "c, cpp"
 	},
