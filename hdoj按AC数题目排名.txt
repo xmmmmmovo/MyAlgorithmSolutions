@@ -1,6 +1,4 @@
 排名    题号       AC数        题名                                                                            
-18      1093       54135      A+B for Input-Output Practice (V)                           
-19      2008       53299      数值统计                                                        
 20      2009       52020      求数列的和                                                       
 21      2012       50766      素数判定                                                        
 22      1094       50734      A+B for Input-Output Practice (VI)                          

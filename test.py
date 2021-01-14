@@ -1,4 +1,6 @@
-i = [1, 2, 3]
+import random
 
-print(i[:1])
-print(i[1:])
+for i in range(5):
+    for j in range(12):
+        print(f"36.{random.randint(2, 8)} ", end='')
+    print()

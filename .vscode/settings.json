@@ -102,6 +102,7 @@
         "unordered_map": "cpp",
         "utility": "cpp",
         "vector": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "deque": "cpp"
     }
 }
