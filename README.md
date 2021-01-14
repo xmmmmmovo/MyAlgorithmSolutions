@@ -42,6 +42,8 @@
 
 [1003 Max Sum](HDU%20OJ/1003%20Max%20Sum.cpp)
 
+[1093 A+B for Input-Output Practice (V)](HDU%20OJ/1093%20A+B%20for%20Input-Output%20Practice%20(V).cpp)
+
 [2000 ASCII码排序](HDU%20OJ/2000%20ASCII码排序.cpp)
 
 [2001 计算两点间的距离](HDU%20OJ/2001%20计算两点间的距离.cpp)
