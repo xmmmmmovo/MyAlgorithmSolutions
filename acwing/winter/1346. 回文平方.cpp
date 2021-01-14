@@ -12,6 +12,16 @@ using namespace std;
 
 int b;
 
+// 其他进制转换到十进制
+// 秦九韶算法
+int to_10(string num, int b) {
+    int res = 0;
+    for (auto c : num) {
+        res = res * b + c < '9' ? c - '0' : c - 'A' + 10;
+    }
+    return res;
+}
+
 string to_B(int i, int b) {
     string tmp;
     char c;
