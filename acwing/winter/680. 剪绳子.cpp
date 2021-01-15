@@ -12,7 +12,7 @@ bool check(double x) {
         tm += L[i] / x;
     }
     // 因为后面输出的是l所以需要把答案包含进l里面
-    return tm >= m ? true : false;
+    return tm >= m;
 }
 
 int main() {

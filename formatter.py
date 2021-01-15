@@ -1,6 +1,6 @@
 import os
 
-dirs = ['HDU OJ', 'LeetCode', 'PTA', 'SophomoreAlgorithm']
+dirs = ['acwing', 'HDU OJ', 'LeetCode', 'PTA', 'SophomoreAlgorithm']
 
 
 def dfs(p, lf):

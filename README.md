@@ -248,6 +248,31 @@
 
 [1003我要通过！](PTA/1003我要通过！.cpp)
 
+## ACWing
+
+### 算法基础班
+
+[785. 快速排序](acwing/base/785.%20快速排序.cpp)
+[786. 第k个数](acwing/base/786.%20第k个数.cpp)
+[787. 归并排序](acwing/base/787.%20归并排序.cpp)
+[788. 逆序对的数量](acwing/base/788.%20逆序对的数量.cpp)
+[789. 二分搜索](acwing/base/789.%20二分搜索.cpp)
+[790. 浮点二分](acwing/base/790.%20浮点二分.cpp)
+[791. 高精度加法](acwing/base/791.%20高精度加法.cpp)
+[792. 高精度减法](acwing/base/792.%20高精度减法.cpp)
+[793. 高精度乘法](acwing/base/793.%20高精度乘法.cpp)
+[844. 走迷宫](acwing/winter/844.%20走迷宫.cpp)
+
+### 寒假每日一题
+
+[104. 仓库选址](acwing/winter/104.%20仓库选址.cpp)
+[898. 数字三角形](acwing/winter/898.%20数字三角形.cpp)
+[756. 蛇形矩阵](acwing/winter/756.%20蛇形矩阵.cpp)
+[1113. 红与黑](acwing/winter/1113.%20红与黑.cpp)
+[1346. 回文平方](acwing/winter/1346.%20回文平方.cpp)
+[680. 剪绳子](acwing/winter/680.%20剪绳子.cpp)
+[1227. 分巧克力](acwing/winter/1227.%20分巧克力.cpp)
+
 ## 大二
 
 ### 2019 新生赛
