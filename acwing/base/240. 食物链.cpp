@@ -9,32 +9,48 @@
 
 using namespace std;
 
-const int N = 1e5 + 10;
-int n, m;
-int p[N];
+const int N = 5e4 + 10;
+int n, k, cnt = 0;
+int t, x, y;
+int p[N], d[N];
 
 int find(int x) {// 返回x的跟节点
-    if (p[x] != x) p[x] = find(p[x]);
+    if (p[x] != x) {
+        int t = find(p[x]);
+        d[x] += d[p[x]];
+        p[x] = t;
+    }
     return p[x];
 }
 
 int main() {
-    scanf("%d %d", &n, &m);
+    scanf("%d %d", &n, &k);
 
     for (int i = 1; i <= n; i++) p[i] = i;
 
-    for (int i = 0; i < m; i++) {
-        char op[2];
-        int a, b;
-        scanf("%s %d %d", op, &a, &b);
-        if (op[0] == 'M') p[find(a)] = find(b);
+    for (int i = 0; i < k; i++) {
+
+        scanf("%d %d %d", &t, &x, &y);
+        if (x > n || y > n) cnt++;
         else {
-            if (find(a) == find(b)) printf("Yes\n");
-            else
-                printf("No\n");
+            int px = find(x), py = find(y);
+            if (t == 1) {
+                if (px == py && (d[x] - d[y]) % 3) cnt++;
+                else if (px != py) {
+                    p[px] = p[py];
+                    d[px] = d[y] - d[x];
+                }
+            } else {
+                if (px == py && (d[x] - d[y] - 1) % 3) cnt++;
+                else if (px != py) {
+                    p[px] = p[py];
+                    d[px] = d[y] + 1 - d[x];
+                }
+            }
         }
     }
 
+    printf("%d", cnt);
 
     return 0;
 }

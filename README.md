@@ -130,6 +130,8 @@
 
 [300.最长上升子序列](LeetCode/daily/greedy/300.最长上升子序列.py)
 
+[605.种花问题](LeetCode/daily/greedy/605.%20种花问题.cpp)
+
 [860.柠檬水找零](LeetCode/daily/greedy/860.柠檬水找零.py)
 
 [945.使数组唯一的最小增量](LeetCode/daily/greedy/945.使数组唯一的最小增量.py)
@@ -311,6 +313,8 @@
 [1227. 分巧克力](acwing/winter/1227.%20分巧克力.cpp)
 
 [422. 校门外的树](acwing/winter/422.%20校门外的树.cpp)
+
+[429. 奖学金](acwing/winter/429.%20奖学金.cpp)
 
 ## 大二
 
