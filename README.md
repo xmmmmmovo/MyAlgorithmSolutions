@@ -2,6 +2,22 @@
 
 记录我所有的算法/数据结构
 
+## 目录
+<details>
+    <summary>点击打开目录</summary>
+
+- [笔记](#笔记)
+- [数据结构](#数据结构)
+- [算法（第四版）](#算法第四版)
+- [大一题目](#大一题目)
+- [HDOJ](#hdoj)
+- [Leetcode](#leetcode)
+- [PTA](#pta)
+- [ACWing](#acwing)
+- [大二题目](#大二)
+
+</details>
+
 ## 笔记
 
 [数据结构MOOC笔记](note%20in%20mooc.md)

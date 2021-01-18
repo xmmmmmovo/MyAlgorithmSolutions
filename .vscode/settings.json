@@ -106,6 +106,8 @@
         "deque": "cpp",
         "__tree": "cpp",
         "map": "cpp",
-        "set": "cpp"
+        "set": "cpp",
+        "stack": "cpp",
+        "numeric": "cpp"
     }
 }
