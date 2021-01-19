@@ -84,171 +84,171 @@
 
 ### 数组
 
-[1.两数之和](LeetCode/daily/array/1.两数之和.py)
+[1.两数之和](LeetCode/daily/1.两数之和.py)
 
-[120.三角形最小路径和](LeetCode/daily/array/120.三角形最小路径和.py)
+[120.三角形最小路径和](LeetCode/daily/120.三角形最小路径和.py)
 
-[121.买卖股票的最佳时机](LeetCode/daily/array/121.买卖股票的最佳时机.py)
+[121.买卖股票的最佳时机](LeetCode/daily/121.买卖股票的最佳时机.py)
 
-[169.多数元素](LeetCode/daily/array/169.多数元素.py)
+[169.多数元素](LeetCode/daily/169.多数元素.py)
 
-[1013.将数组分成和相等的三个部分](LeetCode/daily/array/1013.将数组分成和相等的三个部分.py)
+[1013.将数组分成和相等的三个部分](LeetCode/daily/1013.将数组分成和相等的三个部分.py)
 
-[1380.矩阵中的幸运数.py](LeetCode/daily/array/1380.矩阵中的幸运数.py)
+[1380.矩阵中的幸运数.py](LeetCode/daily/1380.矩阵中的幸运数.py)
 
-[1389.按既定顺序创建目标数组](LeetCode/daily/array/1389.按既定顺序创建目标数组.py)
+[1389.按既定顺序创建目标数组](LeetCode/daily/1389.按既定顺序创建目标数组.py)
 
-[1409.查询带键的排列](LeetCode/daily/array/1409.查询带键的排列.py)
+[1409.查询带键的排列](LeetCode/daily/1409.查询带键的排列.py)
 
-[**旋转矩阵(经典题目 原地旋转)**](LeetCode/daily/array/面试题01.07.%20旋转矩阵.py)
+[**旋转矩阵(经典题目 原地旋转)**](LeetCode/daily/面试题01.07.%20旋转矩阵.py)
 
 ### 位运算
 
-[1404.将二进制表示减到1的步骤数](LeetCode/daily/bits/1404.将二进制表示减到%201%20的步骤数.py)
+[1404.将二进制表示减到1的步骤数](LeetCode/daily/1404.将二进制表示减到%201%20的步骤数.py)
 
-[判定字符是否唯一](LeetCode/daily/bits/面试题01.01.判定字符是否唯一.py)
+[判定字符是否唯一](LeetCode/daily/面试题01.01.判定字符是否唯一.py)
 
 ### 设计类
 
-[225.用队列实现栈](LeetCode/daily/design/225.用队列实现栈.py)
+[225.用队列实现栈](LeetCode/daily/225.用队列实现栈.py)
 
-[1381.设计一个支持增量操作的栈](LeetCode/daily/design/1381.设计一个支持增量操作的栈.py)
+[1381.设计一个支持增量操作的栈](LeetCode/daily/1381.设计一个支持增量操作的栈.py)
 
-[1396.设计地铁系统](LeetCode/daily/design/1396.设计地铁系统.py)
+[1396.设计地铁系统](LeetCode/daily/1396.设计地铁系统.py)
 
-[队列的最大值](LeetCode/daily/design/面试题59-II.队列的最大值.py)
+[队列的最大值](LeetCode/daily/面试题59-II.队列的最大值.py)
 
 ### dfs/bfs
 
-[322.零钱兑换 贪心+抽象dfs+剪枝==暴捶dp](LeetCode/daily/dfs&bfs/322.零钱兑换.py)
+[322.零钱兑换 贪心+抽象dfs+剪枝==暴捶dp](LeetCode/daily/322.零钱兑换.py)
 
-[**695.岛屿的最大面积(经典题目 dfs+剪枝)**](LeetCode/daily/dfs&bfs/695.岛屿的最大面积.py)
+[**695.岛屿的最大面积(经典题目 dfs+剪枝)**](LeetCode/daily/695.岛屿的最大面积.py)
 
-[机器人的运动范围](LeetCode/daily/dfs&bfs/面试题13.机器人的运动范围.py)
+[机器人的运动范围](LeetCode/daily/面试题13.机器人的运动范围.py)
 
 ### 双指针
 
-[42.接雨水](LeetCode/daily/double-point/42.接雨水.py)
+[42.接雨水](LeetCode/daily/42.接雨水.py)
 
 ### dp
 
-[72.编辑距离](LeetCode/daily/dp/72.编辑距离.py)
+[72.编辑距离](LeetCode/daily/72.编辑距离.py)
 
-[887.鸡蛋掉落](LeetCode/daily/dp/887.鸡蛋掉落.py)
+[887.鸡蛋掉落](LeetCode/daily/887.鸡蛋掉落.py)
 
-[1395.统计作战单位数](LeetCode/daily/dp/1395.统计作战单位数.py)
+[1395.统计作战单位数](LeetCode/daily/1395.统计作战单位数.py)
 
-[1411.给Nx3网格图涂色的方案数](LeetCode/daily/dp/1411.给%20N%20x%203%20网格图涂色的方案数.py)
+[1411.给Nx3网格图涂色的方案数](LeetCode/daily/1411.给%20N%20x%203%20网格图涂色的方案数.py)
 
-[按摩师](LeetCode/daily/dp/面试题17.16.按摩师.py)
+[按摩师](LeetCode/daily/面试题17.16.按摩师.py)
 
 ### 贪心
 
-[300.最长上升子序列](LeetCode/daily/greedy/300.最长上升子序列.py)
+[300.最长上升子序列](LeetCode/daily/300.最长上升子序列.py)
 
-[605.种花问题](LeetCode/daily/greedy/605.%20种花问题.cpp)
+[605.种花问题](LeetCode/daily/605.%20种花问题.cpp)
 
-[860.柠檬水找零](LeetCode/daily/greedy/860.柠檬水找零.py)
+[860.柠檬水找零](LeetCode/daily/860.柠檬水找零.py)
 
-[945.使数组唯一的最小增量](LeetCode/daily/greedy/945.使数组唯一的最小增量.py)
+[945.使数组唯一的最小增量](LeetCode/daily/945.使数组唯一的最小增量.py)
 
-[1111.有效括号的嵌套深度](LeetCode/daily/greedy/1111.有效括号的嵌套深度.py)
+[1111.有效括号的嵌套深度](LeetCode/daily/1111.有效括号的嵌套深度.py)
 
 ### 哈希表
 
-[409.最长回文串](LeetCode/daily/hash/409.最长回文串.py)
+[409.最长回文串](LeetCode/daily/409.最长回文串.py)
 
-[1160.拼写单词](LeetCode/daily/hash/1160.拼写单词.py)
+[1160.拼写单词](LeetCode/daily/1160.拼写单词.py)
 
-[1394.找出数组中的幸运数](LeetCode/daily/hash/1394.找出数组中的幸运数.py)
+[1394.找出数组中的幸运数](LeetCode/daily/1394.找出数组中的幸运数.py)
 
-[判定是否互为字符重排](LeetCode/daily/hash/面试题01.02.判定是否互为字符重排.py)
+[判定是否互为字符重排](LeetCode/daily/面试题01.02.判定是否互为字符重排.py)
 
-[回文排列](LeetCode/daily/hash/面试题01.04.回文排列.py)
+[回文排列](LeetCode/daily/面试题01.04.回文排列.py)
 
 ### 链表
 
-[2.两数相加](LeetCode/daily/list/2.两数相加.py)
+[2.两数相加](LeetCode/daily/2.两数相加.py)
 
-[**206.反转链表(经典题目)**](LeetCode/daily/list/206.反转链表.py)
+[**206.反转链表(经典题目)**](LeetCode/daily/206.反转链表.py)
 
-[876.链表的中间结点](LeetCode/daily/list/876.链表的中间结点.py)
+[876.链表的中间结点](LeetCode/daily/876.链表的中间结点.py)
 
 ### 数学
 
-[365.水壶问题](LeetCode/daily/math/365.水壶问题.py)
+[365.水壶问题](LeetCode/daily/365.水壶问题.py)
 
-[836.矩形重叠](LeetCode/daily/math/836.矩形重叠.py)
+[836.矩形重叠](LeetCode/daily/836.矩形重叠.py)
 
-[892.三维形体的表面积](LeetCode/daily/math/892.三维形体的表面积.py)
+[892.三维形体的表面积](LeetCode/daily/892.三维形体的表面积.py)
 
-[914.卡牌分组](LeetCode/daily/math/914.卡牌分组.py)
+[914.卡牌分组](LeetCode/daily/914.卡牌分组.py)
 
-[1276.不浪费原料的汉堡制作方案](LeetCode/daily/math/1276.不浪费原料的汉堡制作方案.py)
+[1276.不浪费原料的汉堡制作方案](LeetCode/daily/1276.不浪费原料的汉堡制作方案.py)
 
-[**1390.四因数(经典题目 素数筛)**](LeetCode/daily/math/1390.四因数.py)
+[**1390.四因数(经典题目 素数筛)**](LeetCode/daily/1390.四因数.py)
 
-[圆圈中最后剩下的数字](LeetCode/daily/math/面试题62.圆圈中最后剩下的数字.py)
+[圆圈中最后剩下的数字](LeetCode/daily/面试题62.圆圈中最后剩下的数字.py)
 
 ### 正则
 
-[8.字符串转换整数-atoi](LeetCode/daily/regex/8.字符串转换整数-atoi.py)
+[8.字符串转换整数-atoi](LeetCode/daily/8.字符串转换整数-atoi.py)
 
 ### 模拟
 
-[289.生命游戏](LeetCode/daily/simulate/289.生命游戏.py)
+[289.生命游戏](LeetCode/daily/289.生命游戏.py)
 
-[999.车的可用捕获量](LeetCode/daily/simulate/999.车的可用捕获量.py)
+[999.车的可用捕获量](LeetCode/daily/999.车的可用捕获量.py)
 
-[1403.非递增顺序的最小子序列](LeetCode/daily/simulate/1403.非递增顺序的最小子序列.py)
+[1403.非递增顺序的最小子序列](LeetCode/daily/1403.非递增顺序的最小子序列.py)
 
 ### 排序
 
-[56.合并区间](LeetCode/daily/sort/56.合并区间.py)
+[56.合并区间](LeetCode/daily/56.合并区间.py)
 
-[**912.排序数组(经典题目 快排 非比较排序 桶排)**](LeetCode/daily/sort/912.排序数组.py)
+[**912.排序数组(经典题目 快排 非比较排序 桶排)**](LeetCode/daily/912.排序数组.py)
 
-[最小的k个数](LeetCode/daily/sort/面试题40.最小的k个数.py)
+[最小的k个数](LeetCode/daily/面试题40.最小的k个数.py)
 
 ### 栈
 
-[71.简化路径](LeetCode/daily/stack/71.简化路径.py)
+[71.简化路径](LeetCode/daily/71.简化路径.py)
 
 ### 字符串
 
-[6.z-字形变换](LeetCode/daily/string/6.z-字形变换.py)
+[6.z-字形变换](LeetCode/daily/6.z-字形变换.py)
 
-[9.回文数](LeetCode/daily/string/9.回文数.py)
+[9.回文数](LeetCode/daily/9.回文数.py)
 
-[151.翻转字符串里的单词](LeetCode/daily/string/151.翻转字符串里的单词.py)
+[151.翻转字符串里的单词](LeetCode/daily/151.翻转字符串里的单词.py)
 
-[824.山羊拉丁文](LeetCode/daily/string/824.山羊拉丁文.py)
+[824.山羊拉丁文](LeetCode/daily/824.山羊拉丁文.py)
 
-[1071.字符串的最大公因子](LeetCode/daily/string/1071.字符串的最大公因子.py)
+[1071.字符串的最大公因子](LeetCode/daily/1071.字符串的最大公因子.py)
 
-[1078.bigram-分词](LeetCode/daily/string/1078.bigram-分词.py)
+[1078.bigram-分词](LeetCode/daily/1078.bigram-分词.py)
 
-[1405.最长快乐字符串](LeetCode/daily/string/1405.最长快乐字符串.py)
+[1405.最长快乐字符串](LeetCode/daily/1405.最长快乐字符串.py)
 
-[1408.数组中的字符串匹配](LeetCode/daily/string/1408.数组中的字符串匹配.py)
+[1408.数组中的字符串匹配](LeetCode/daily/1408.数组中的字符串匹配.py)
 
-[1410.HTML实体解析器](LeetCode/daily/string/1410.HTML实体解析器.py)
+[1410.HTML实体解析器](LeetCode/daily/1410.HTML实体解析器.py)
 
-[URL化](LeetCode/daily/string/面试题01.03.URL化.py)
+[URL化](LeetCode/daily/面试题01.03.URL化.py)
 
-[字符串压缩](LeetCode/daily/string/面试题01.06.字符串压缩.py)
+[字符串压缩](LeetCode/daily/面试题01.06.字符串压缩.py)
 
 ### 回溯
 
-[22.括号生成](LeetCode/daily/traceback/22.括号生成.py)
+[22.括号生成](LeetCode/daily/22.括号生成.py)
 
 ### 树
 
-[543.二叉树的直径](LeetCode/daily/tree/543.二叉树的直径.py)
+[543.二叉树的直径](LeetCode/daily/543.二叉树的直径.py)
 
-[863.二叉树中所有距离为-k-的结点](LeetCode/daily/tree/863.二叉树中所有距离为-k-的结点.py)
+[863.二叉树中所有距离为-k-的结点](LeetCode/daily/863.二叉树中所有距离为-k-的结点.py)
 
-[**872.叶子相似的树(经典题目 非递归前序遍历)**](LeetCode/daily/tree/872.叶子相似的树.py)
+[**872.叶子相似的树(经典题目 非递归前序遍历)**](LeetCode/daily/872.叶子相似的树.py)
 
 ### 数据库
 
@@ -256,7 +256,7 @@
 
 ### 字典树
 
-[**820.单词的压缩编码(经典题目 字典树)**](LeetCode/daily/trie/820.单词的压缩编码.py)
+[**820.单词的压缩编码(经典题目 字典树)**](LeetCode/daily/820.单词的压缩编码.py)
 
 ## PTA
 
@@ -311,6 +311,8 @@
 ### 双指针
 
 [799. 最长连续不重复子序列](acwing/base/799.%20最长连续不重复子序列.cpp)
+
+[800. 数组元素的目标和](acwing/base/800.%20数组元素的目标和.cpp)
 
 ### 区间合并
 
