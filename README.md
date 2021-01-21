@@ -14,6 +14,7 @@
 - [Leetcode](#leetcode)
 - [PTA](#pta)
 - [ACWing](#acwing)
+- [POJ](#poj)
 - [大二题目](#大二)
 
 </details>
@@ -389,6 +390,12 @@
 [1532. 找硬币](acwing/winter/1532.%20找硬币.cpp)
 
 [1341. 十三号星期五](acwing/winter/1341.%20十三号星期五.cpp)
+
+[754. 平方矩阵 II](acwing/winter/754.%20平方矩阵%20II.cpp)
+
+## POJ
+
+[3760.魔兽世界(修订版)]()
 
 ## 大二
 
