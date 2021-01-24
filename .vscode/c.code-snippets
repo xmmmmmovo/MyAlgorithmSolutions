@@ -29,18 +29,6 @@
 		"description": "头文件snippets_se",
 		"scope": "c, cpp"
 	},
-	"printf":{
-		"prefix": "printf",
-		"body": "printf(\"${1:%s}\", $2);$3",
-		"description": "输出函数",
-		"scope": "c, cpp"
-	},
-	"scanf":{
-		"prefix": "scanf",
-		"body": "scanf(\"${1:%s}\", $2);$3",
-		"description": "输入函数",
-		"scope": "c, cpp"
-	},
 	"void function":{
 		"prefix": "vfun",
 		"body": "void ${1:name}($2) {\n\t$3\n\treturn;\n}",
@@ -95,16 +83,10 @@
 		"description": "while 片段",
 		"scope": "c, cpp"
 	},
-	"For Loop":{
-		"prefix": "for",
-		"body": "for (${1:i} = 0; ${1:i} < ${2:count}; ${1:i}${3:++}) {\n\t$4\n}",
-		"description": "for 片段",
-		"scope": "c, cpp"
-	},
 	"main":{
 		"prefix": "main",
-		"body": "#include <stdio.h>\n#include <stdlib.h>\nint main() {\n\t$0\n\n\treturn 0;\n}",
+		"body": "#include <iostream>\n#include <algorithm>\nusing namespace std;\nint main() {\n\t$0\n\n\treturn 0;\n}",
 		"description": "主函数",
-		"scope": "c"
+		"scope": "cpp"
 	}
 }
