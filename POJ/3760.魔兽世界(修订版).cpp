@@ -360,6 +360,10 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
+
+    freopen("input.txt","r",stdin);  //输入将被重定向到文件
+    freopen("ouput.txt","w",stdout);  //输入将被重定向到文件
+
     cin >> groups;
     for (int g = 1; g <= groups; g++) {
         cin >> m >> n >> t;

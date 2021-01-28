@@ -85,7 +85,7 @@
 	},
 	"main":{
 		"prefix": "main",
-		"body": "#include <iostream>\n#include <algorithm>\nusing namespace std;\nint main() {\n\t$0\n\n\treturn 0;\n}",
+		"body": "#include <iostream>\n#include <algorithm>\n\nusing namespace std;\n\nint main() {\n\t$0\n\n\treturn 0;\n}",
 		"description": "主函数",
 		"scope": "cpp"
 	}
