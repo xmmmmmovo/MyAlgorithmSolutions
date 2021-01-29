@@ -1,10 +1,8 @@
-#include <iostream>
 #include <algorithm>
+#include <iostream>
 using namespace std;
 int main() {
-    int i = 0;
-    if(++i == 1)
-        cout << "aa" << endl;
-
+    int             ii = 0;
+    shared_ptr<int> i  = &ii;
     return 0;
 }
