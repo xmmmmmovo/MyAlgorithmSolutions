@@ -6,13 +6,30 @@
  */
 #include <algorithm>
 #include <iostream>
+#include <stack>
 
 using namespace std;
 
-int n;
+const int  N = 1e5 + 10;
+int        n;
+stack<int> s;
 
 int main() {
     scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        int t;
+        cin >> t;
+
+        while (!s.empty() && s.top() >= t)
+            s.pop();
+        if (!s.empty())
+            cout << s.top() << " ";
+        else
+            cout << -1 << " ";
+
+        s.push(t);
+    }
 
     return 0;
 }
