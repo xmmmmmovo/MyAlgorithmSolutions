@@ -39,7 +39,7 @@ class Solution {
         for (auto &&n : inorder) {
             dic[n] = idx++;
         }
-        // 传入最左节点，最左边节点，最右边节点
+        // 根节点，左边
         return recur(0, 0, inorder.size() - 1);
     }
 };

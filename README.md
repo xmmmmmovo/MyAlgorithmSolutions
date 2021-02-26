@@ -277,6 +277,16 @@
 
 [剑指 Offer 07. 重建二叉树](LeetCode/sword_offer/剑指%20Offer%2007.%20重建二叉树.cpp)
 
+[剑指 Offer 09. 用两个栈实现队列](LeetCode/sword_offer/剑指%20Offer%2009.%20用两个栈实现队列.cpp)
+
+[剑指 Offer 10- I. 斐波那契数列](LeetCode/sword_offer/剑指%20Offer%2010-%20I.%20斐波那契数列.cpp)
+
+[剑指 Offer 10- II. 青蛙跳台阶问题](LeetCode/sword_offer/剑指%20Offer%2010-%20II.%20青蛙跳台阶问题.cpp) 
+
+[剑指 Offer 11. 旋转数组的最小数字](LeetCode/sword_offer/剑指%20Offer%2011.%20旋转数组的最小数字.cpp)
+
+
+
 ## PAT
 
 ### 甲级
