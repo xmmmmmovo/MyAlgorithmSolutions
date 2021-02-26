@@ -265,6 +265,18 @@
 
 [面试题13.机器人的运动范围](LeetCode/gold_book/面试题13.机器人的运动范围.py)
 
+## 剑指OFFER
+
+[剑指 Offer 03. 数组中重复的数字](LeetCode/sword_offer/剑指%20Offer%2003.%20数组中重复的数字.cpp)
+
+[剑指 Offer 04. 二维数组中的查找](LeetCode/sword_offer/剑指%20Offer%2004.%20二维数组中的查找.cpp)
+
+[剑指 Offer 05. 替换空格](LeetCode/sword_offer/剑指%20Offer%2005.%20替换空格.cpp)
+
+[剑指 Offer 06. 从尾到头打印链表](LeetCode/sword_offer/剑指%20Offer%2006.%20从尾到头打印链表.cpp)
+
+[剑指 Offer 07. 重建二叉树](LeetCode/sword_offer/剑指%20Offer%2007.%20重建二叉树.cpp)
+
 ## PAT
 
 ### 甲级
@@ -364,6 +376,8 @@
 [154. 滑动窗口](acwing/base/154.%20滑动窗口.cpp)
 
 #### KMP
+
+[831. KMP字符串](acwing/base/831.%20KMP字符串.cpp)
 
 #### Tire
 
