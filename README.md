@@ -285,6 +285,9 @@
 
 [剑指 Offer 11. 旋转数组的最小数字](LeetCode/sword_offer/剑指%20Offer%2011.%20旋转数组的最小数字.cpp)
 
+[剑指 Offer 12. 矩阵中的路径](LeetCode/sword_offer/剑指%20Offer%2012.%20矩阵中的路径.cpp)
+
+[剑指 Offer 13. 机器人的运动范围](LeetCode/sword_offer/剑指%20Offer%2013.%20机器人的运动范围.cpp)
 
 
 ## PAT
@@ -402,6 +405,10 @@
 #### 堆
 
 #### 哈希表
+
+#### DFS
+
+[842. 排列数字](acwing/base/842.%20排列数字.cpp)
 
 #### BFS
 

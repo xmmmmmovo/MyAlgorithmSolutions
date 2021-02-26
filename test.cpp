@@ -2,7 +2,6 @@
 #include <iostream>
 using namespace std;
 int main() {
-    int             ii = 0;
-    shared_ptr<int> i  = &ii;
+    printf("%d", bool('b' == 'b'));
     return 0;
 }
