@@ -23,9 +23,9 @@ unordered_map<char, int> p{
 };
 
 void eval(stack<int> &num, stack<char> &op) {
-    int a = num.top();
+    int b= num.top();
     num.pop();
-    int b = num.top();
+    int a = num.top();
     num.pop();
     char c = op.top();
     op.pop();
@@ -76,19 +76,3 @@ int main() {
     cout << num.top() << endl;
     return 0;
 }
-
-
-0 0 1
-0 0 2
-1 7 2
-1 7 3
-2 9 3
-1 16 1
-1 16 2
-1 16 3
-2 1 3
-2 1 4
-3 3 4
-2 4 2
-1 0 0
-0
