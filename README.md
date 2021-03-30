@@ -251,6 +251,20 @@
 
 [剑指 Offer 13. 机器人的运动范围](LeetCode/sword_offer/剑指%20Offer%2013.%20机器人的运动范围.cpp)
 
+[剑指 Offer 14- I. 剪绳子](LeetCode/sword_offer/剑指%20Offer%2014-%20I.%20剪绳子.cpp)
+
+[剑指 Offer 14- II. 剪绳子 II](LeetCode/sword_offer/剑指%20Offer%2014-%20II.%20剪绳子%20II.cpp)
+
+[剑指 Offer 15. 二进制中1的个数](LeetCode/sword_offer/剑指%20Offer%2015.%20二进制中1的个数.cpp)
+
+[剑指 Offer 16. 数值的整数次方](LeetCode/sword_offer/剑指%20Offer%2016.%20数值的整数次方.cpp)
+
+[剑指 Offer 17. 打印从1到最大的n位数](LeetCode/sword_offer/剑指%20Offer%2017.%20打印从1到最大的n位数.cpp)
+
+[剑指 Offer 18. 删除链表的节点](LeetCode/sword_offer/剑指%20Offer%2018.%20删除链表的节点.cpp)
+
+[剑指 Offer 19. 正则表达式匹配](LeetCode/sword_offer/剑指%20Offer%2019.%20正则表达式匹配.cpp)
+
 
 ## PAT
 

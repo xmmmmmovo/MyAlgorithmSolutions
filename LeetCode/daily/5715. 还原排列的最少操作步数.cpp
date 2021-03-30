@@ -41,7 +41,6 @@ class Solution {
             }
             copy(arr.begin(), arr.end(), perm.begin());
             cnt++;
-            cout << perm[0] << perm[1] << endl;
         } while (!check(perm));
 
         return cnt;
