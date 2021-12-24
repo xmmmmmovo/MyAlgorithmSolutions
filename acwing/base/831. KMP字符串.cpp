@@ -10,7 +10,7 @@
 
 using namespace std;
 
-const int N = 10010, M = 100010;
+const int N = 100010, M = 1000010;
 
 int  n, m;
 char p[N], s[M];
@@ -25,17 +25,18 @@ int main() {
             j = ne[j];
         if (p[i] == p[j + 1])
             j++;
-        ne[i] == j;
+        ne[i] = j;
     }
 
     // 匹配过程
-    for (int i = 1, j = 0; i <= n; i++) {
+    for (int i = 1, j = 0; i <= m; i++) {
         while (j && s[i] != p[j + 1])
             j = ne[j];
         if (s[i] == p[j + 1])
             j++;
+        cout << j << " " << n << endl;
         if (j == n) {
-            printf("%d", i - n);
+            printf("%d ", i - n);
             j = ne[j];
         }
     }

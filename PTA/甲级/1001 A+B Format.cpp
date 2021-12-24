@@ -13,30 +13,15 @@ using namespace std;
 int main() {
     int a, b;
     scanf("%d %d", &a, &b);
-    a += b;
-
-    string res;
-    bool   minus = false;
-    if (a < 0) {
-        a     = -a;
-        minus = true;
+    auto s = to_string(a + b);
+    // 100,000
+    for (int i = 0; i < s.length(); i++) {
+        printf("%c", s[i]);
+        if (s[i] == '-')
+            continue;
+        if ((i + 1) % 3 == s.length() % 3 && i != s.length() - 1)
+            printf(",");
     }
-
-    int flag = 1, k = a;
-    while (k != 0) {
-        res.push_back((k % 10) + '0');
-        k /= 10;
-        if (a > 9999 && flag % 3 == 0)
-            res.push_back(',');
-        flag++;
-    }
-
-    while (res.back() == ',')
-        res.pop_back();
-
-    if (minus)
-        cout << "-";
-    cout << string(res.rbegin(), res.rend());
 
     return 0;
 }

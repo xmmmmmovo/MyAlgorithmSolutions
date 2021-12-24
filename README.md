@@ -83,8 +83,6 @@
 
 ## LeetCode
 
-[1.两数之和](LeetCode/daily/1.两数之和.py)
-
 [120.三角形最小路径和](LeetCode/daily/120.三角形最小路径和.py)
 
 [121.买卖股票的最佳时机](LeetCode/daily/121.买卖股票的最佳时机.py)

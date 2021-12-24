@@ -13,8 +13,8 @@ class ListNode:
         self.val = x
         self.next = None
 
-# @lc code=start
 
+# @lc code=start
 
 class Solution:
     def middleNode(self, head: ListNode) -> ListNode:
@@ -41,7 +41,7 @@ class Solution2:
             ans.append(head)
             head = head.next
 
-        return ans[len(ans)//2]
+        return ans[len(ans) // 2]
 
 
 class Solution3:
@@ -56,5 +56,6 @@ class Solution3:
             slow = slow.next
             fast = fast.next.next
         return slow
+
 
 # @lc code=end

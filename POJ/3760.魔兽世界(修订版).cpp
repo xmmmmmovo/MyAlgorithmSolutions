@@ -63,7 +63,7 @@ void gen_warrior(station &s, int h, int m) {
     s.widx++;
     s.w = wt;
     s.hel_remain -= wt.health;
-    cout << s.name << " " << warrior_name[s.w.type] << " " << s.w.id << " bron"
+    cout << s.name << " " << warrior_name[s.w.type] << " " << s.w.id << " born"
          << endl;
 }
 
