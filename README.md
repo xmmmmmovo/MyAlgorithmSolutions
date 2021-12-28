@@ -474,26 +474,6 @@
 
 ## 大二
 
-### 2019 新生赛
-
-[A A+B pro](SophomoreAlgorithm/acm%20new%20stu%20comp/A%20A+B%20pro.cpp)
-
-[B Num Sum](SophomoreAlgorithm/acm%20new%20stu%20comp/B%20Num%20Sum.cpp)
-
-[C Salt Water](SophomoreAlgorithm/acm%20new%20stu%20comp/C%20Salt%20Water.cpp)
-
-[D Let the Ballon Rise](SophomoreAlgorithm/acm%20new%20stu%20comp/D%20Let%20the%20Ballon%20Rise.cpp)
-
-[E Digital Roots](SophomoreAlgorithm/acm%20new%20stu%20comp/E%20Digital%20Roots.cpp)
-
-[F 3 foots](SophomoreAlgorithm/acm%20new%20stu%20comp/F%203%20foots.cpp)
-
-### 蓝桥杯模拟
-
-[2.井底之蛙](SophomoreAlgorithm/bb2019sim/2.moha.cpp)
-
-[3.三的倍数](SophomoreAlgorithm/bb2019sim/3.beishu.cpp)
-
 ### 蓝桥杯学习
 
 #### bfs
