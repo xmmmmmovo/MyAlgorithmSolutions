@@ -39,8 +39,7 @@ private:
     }
 
     size_t calcu_growth(const size_t new_size) const {
-        //        const size_t geometric = capacity() << 2;
-        const size_t geometric = capacity() + capacity() / 2;
+               const size_t geometric = capacity() << 1;
         return max(geometric, new_size);
     }
 
