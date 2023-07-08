@@ -14,7 +14,7 @@ class CQueue {
   public:
     CQueue() {}
 
-    void appendTail(int value) { l.push(value); }
+    void appendTail(int value) { l.emplace(value); }
 
     int deleteHead() {
         if (l.empty() && r.empty())
@@ -25,7 +25,7 @@ class CQueue {
             return t;
         }
         while (l.size()) {
-            r.push(l.top());
+            r.emplace(l.top());
             l.pop();
         }
         auto t = r.top();

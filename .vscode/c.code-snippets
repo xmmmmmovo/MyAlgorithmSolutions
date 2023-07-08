@@ -85,7 +85,7 @@
   },
   "main": {
     "prefix": "main",
-    "body": "#include <iostream>\n#include <algorithm>\n#include <vector>\n#include <numeric>\n#include <stack>\n#include <string>\n#include <unordered_map>\n\nusing namespace std;\nusing ll = long long;\n\nint t;\nvoid solve() {\n\t$0\n}\n\nint main() {\n\tscanf(\"%d\", &t);\n\twhile(t--) {\n\t\tsolve();\n\t}\n\n\treturn 0;\n}",
+    "body": "#include <iostream>\n#include <cmath>\n#include <algorithm>\n#include <vector>\n#include <numeric>\n#include <stack>\n#include <string>\n#include <unordered_map>\n\nusing namespace std;\nusing ll = long long;\n\nint t;\n\nvoid solve() {\n\t$0\n}\n\nint main() {\n\tscanf(\"%d\", &t);\n\twhile(t--) {\n\t\tsolve();\n\t}\n\n\treturn 0;\n}",
     "description": "主函数",
     "scope": "cpp"
   }
